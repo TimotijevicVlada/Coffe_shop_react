@@ -1,0 +1,150 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+* .App {
+  font-family: "Poppins", sans-serif;
+}
+
+* .App .navbar {
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background-color: #f0e5d1;
+}
+
+* .App .navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #946b45;
+}
+
+* .App .navbar .logo span {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+* .App .navbar .logo .fas {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 27px;
+}
+
+* .App .navbar .menu span {
+  color: #946b45;
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+* .App .navbar .menu span:hover {
+  text-decoration: underline;
+}
+
+* .App .navbar .menu_right i {
+  color: #946b45;
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+* .App .home {
+  height: 92vh;
+  background: url(../image/coffee_home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 20px;
+}
+
+* .App .home .header {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 80px;
+}
+
+* .App .home .header .text {
+  color: beige;
+  font-size: 70px;
+  line-height: 1.2em;
+}
+
+* .App .home .header button {
+  width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border: none;
+  background-color: #946b45;
+  color: beige;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+* .App .home .header button:hover {
+  background-color: #cbb595;
+  color: #946b45;
+}
+
+* .App .products {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+* .App .products .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: beige;
+  cursor: pointer;
+  margin: 10px;
+}
+
+* .App .products .item img {
+  width: 35%;
+}
+/*# sourceMappingURL=App.css.map */
