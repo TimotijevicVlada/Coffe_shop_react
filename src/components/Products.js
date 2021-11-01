@@ -1,40 +1,27 @@
 import React from 'react';
-import coffee from "../image/lavazza.png";
-import coffee1 from "../image/lavazza_crema_light.png";
-import coffee2 from "../image/lavazza_crema.png";
-import coffee3 from "../image/lavazza_cremosa.png";
-import coffee4 from "../image/lavazza_egusto.png";
-import coffee5 from "../image/lavazza_rossa.png";
-import coffee6 from "../image/lavazza_green.png";
-import coffee7 from "../image/lavazza_grand.png";
+import {products} from "../data";
 
 const Products = () => {
     return (
         <div className="products">
-            <div className="item">
-                <img src={coffee} alt="lavazza" />
-            </div>
-            <div className="item">
-                <img src={coffee1} alt="lavazza1" />
-            </div>
-            <div className="item">
-                <img src={coffee2} alt="lavazza1" />
-            </div>
-            <div className="item">
-                <img src={coffee3} alt="lavazza1" />
-            </div>
-            <div className="item">
-                <img src={coffee4} alt="lavazza1" />
-            </div>
-            <div className="item">
-                <img src={coffee5} alt="lavazza1" />
-            </div>
-            <div className="item">
-                <img src={coffee6} alt="lavazza1" />
-            </div>
-            <div className="item">
-                <img src={coffee7} alt="lavazza1" />
-            </div>
+            {products.map(item => (
+                <div className="item" key={item.id}>
+                    <img src={`coffee_img/${item.img}`} alt={item.name} />
+                    <div className="info">
+                        <h3 className="name">{item.name}</h3>
+                        <div className="price">
+                            <span className="current">${item.price.current.toFixed(2)}</span>
+                            <span className="old">${item.price.old.toFixed(2)}</span>      
+                        </div>
+                        <div className="stars"><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i></div>
+                    </div>
+                    <div className="events">
+                        <i className="fas fa-shopping-cart"></i>
+                        <i className="fas fa-heart"></i>
+                        <i className="fas fa-eye"></i>
+                    </div>
+                </div>
+            ))}
         </div>
     )
 }

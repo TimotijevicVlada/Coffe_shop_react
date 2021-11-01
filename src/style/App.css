@@ -21,7 +21,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  background-color: #f0e5d1;
+  background-color: #ebebc7;
 }
 
 * .App .navbar .logo {
@@ -112,7 +112,7 @@
 }
 
 * .App .products {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +127,7 @@
 }
 
 * .App .products .item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,15 +137,80 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 350px;
+  width: 300px;
   height: 350px;
   border-radius: 10px;
-  background-color: beige;
+  background-color: #ebebc7;
   cursor: pointer;
   margin: 10px;
+  overflow: hidden;
+}
+
+* .App .products .item:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 * .App .products .item img {
-  width: 35%;
+  width: 40%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-bottom: 40px;
+}
+
+* .App .products .item .info {
+  position: absolute;
+  bottom: 7px;
+  text-align: center;
+}
+
+* .App .products .item .info .name {
+  font-weight: 200;
+}
+
+* .App .products .item .info .price .current {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+* .App .products .item .info .price .old {
+  text-decoration: line-through;
+}
+
+* .App .products .item .info .stars i {
+  color: gold;
+}
+
+* .App .products .item:hover .events {
+  right: 25px;
+}
+
+* .App .products .item .events {
+  position: absolute;
+  right: -45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+* .App .products .item .events i {
+  padding: 10px;
+  background-color: white;
+  border-radius: 3px;
+  margin: 5px 0px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+* .App .products .item .events i:hover {
+  background-color: #946b45;
+  color: beige;
 }
 /*# sourceMappingURL=App.css.map */
