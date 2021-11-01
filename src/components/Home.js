@@ -1,12 +1,14 @@
 import React from 'react';
+import Contact from './Contact';
 
-const Home = () => {
+const Home = ({contact}) => {
     return (
         <div className="home">
             <div className="header">
                 <span className="text">Enjoy the best coffee in the city</span>
                 <button>Order your coffee</button>
             </div>
+            <Contact contact={contact}/>
         </div>
     )
 }

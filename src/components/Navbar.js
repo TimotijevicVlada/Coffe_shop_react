@@ -1,7 +1,10 @@
 import React from 'react';
 
 
-const Navbar = () => {
+const Navbar = ({ contact, setContact }) => {
+
+
+
     return (
         <div className="navbar">
             <div className="logo">
@@ -18,7 +21,7 @@ const Navbar = () => {
             </div>
             <div className="menu_right">
                 <i className="fas fa-shopping-cart"></i>
-                <i className="fas fa-user"></i>
+                <i onClick={() => setContact(!contact)} className="fas fa-user"></i>
             </div>
         </div>
     )

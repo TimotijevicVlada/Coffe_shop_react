@@ -4,8 +4,8 @@ export const products = [
         name: "Super crema",
         img: "lavazza.png",
         price: {
-            current: 14.00,
-            old: 16.00
+            current: 14,
+            old: 16
         }
     },
     {
@@ -13,8 +13,8 @@ export const products = [
         name: "Crema",
         img: "lavazza_crema_light.png",
         price: {
-            current: 15.00,
-            old: 18.00
+            current: 15,
+            old: 18
         }
     },
     {
@@ -22,8 +22,8 @@ export const products = [
         name: "Aroma",
         img: "lavazza_crema.png",
         price: {
-            current: 12.00,
-            old: 15.00
+            current: 12,
+            old: 15
         }
     },
     {
@@ -31,8 +31,8 @@ export const products = [
         name: "Espresso",
         img: "lavazza_cremosa.png",
         price: {
-            current: 10.00,
-            old: 12.00
+            current: 10,
+            old: 12
         }
     },
     {
@@ -40,8 +40,8 @@ export const products = [
         name: "Egusto",
         img: "lavazza_egusto.png",
         price: {
-            current: 17.00,
-            old: 20.00
+            current: 17,
+            old: 20
         }
     },
     {
@@ -49,8 +49,8 @@ export const products = [
         name: "Gold",
         img: "lavazza_gold.png",
         price: {
-            current: 16.00,
-            old: 17.00
+            current: 16,
+            old: 17
         }
     },
     {
@@ -58,8 +58,8 @@ export const products = [
         name: "Brasile",
         img: "lavazza_green.png",
         price: {
-            current: 14.00,
-            old: 17.00
+            current: 14,
+            old: 17
         }
     },
     {
@@ -67,8 +67,8 @@ export const products = [
         name: "Grand",
         img: "lavazza_grand.png",
         price: {
-            current: 13.00,
-            old: 14.00
+            current: 13,
+            old: 14
         }
     }
 ]

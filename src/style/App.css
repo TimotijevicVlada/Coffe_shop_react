@@ -72,6 +72,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0px 20px;
+  position: relative;
 }
 
 * .App .home .header {
@@ -111,6 +112,120 @@
   color: #946b45;
 }
 
+* .App .home .contact_form {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 380px;
+  height: 430px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  -webkit-animation: fadeIn .4s linear;
+          animation: fadeIn .4s linear;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+* .App .home .contact_form .login {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* .App .home .contact_form .login .title {
+  font-weight: 200;
+}
+
+* .App .home .contact_form .login .login_bottom .data {
+  width: 100%;
+}
+
+* .App .home .contact_form .login .login_bottom .data input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+* .App .home .contact_form .login .login_bottom .checkbox {
+  margin-bottom: 25px;
+}
+
+* .App .home .contact_form .login .login_bottom .checkbox input {
+  width: 18px;
+  height: 18px;
+}
+
+* .App .home .contact_form .login .login_bottom .checkbox input {
+  margin-right: 10px;
+}
+
+* .App .home .contact_form .login .login_bottom button {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+* .App .home .contact_form .login .login_bottom button:hover {
+  background-color: lightgray;
+}
+
+* .App .home .contact_form .login .login_bottom .links {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* .App .home .contact_form .login .login_bottom .links span {
+  text-decoration: none;
+  color: #946b45;
+}
+
+* .App .home .contact_form .signup {
+  display: none;
+}
+
+* .App .home .inactive {
+  display: none;
+}
+
 * .App .products {
   min-height: 100vh;
   display: -webkit-box;
@@ -140,7 +255,7 @@
   width: 300px;
   height: 350px;
   border-radius: 10px;
-  background-color: #ebebc7;
+  background-color: #e9e9e9;
   cursor: pointer;
   margin: 10px;
   overflow: hidden;
@@ -182,7 +297,7 @@
 }
 
 * .App .products .item:hover .events {
-  right: 25px;
+  right: 20px;
 }
 
 * .App .products .item .events {
