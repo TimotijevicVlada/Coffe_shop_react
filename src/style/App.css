@@ -117,7 +117,7 @@
   top: 30px;
   right: 30px;
   width: 380px;
-  height: 430px;
+  height: 400px;
   padding: 15px;
   border-radius: 10px;
   background-color: white;
@@ -158,35 +158,58 @@
           justify-content: space-between;
 }
 
-* .App .home .contact_form .login .title {
+* .App .home .contact_form .login .login_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .home .contact_form .login .login_header .login_title {
   font-weight: 200;
 }
 
-* .App .home .contact_form .login .login_bottom .data {
-  width: 100%;
+* .App .home .contact_form .login .login_header .fa-times {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
 }
 
-* .App .home .contact_form .login .login_bottom .data input {
-  width: 100%;
-  outline: none;
+* .App .home .contact_form .login .login_bottom .login_data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* .App .home .contact_form .login .login_bottom .login_data input {
   border: none;
+  font-size: 17px;
+  padding: 8px 0px;
   border-bottom: 1px solid black;
-  padding: 15px 0px;
-  font-size: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
-* .App .home .contact_form .login .login_bottom .checkbox {
-  margin-bottom: 25px;
+* .App .home .contact_form .login .login_bottom .login_data input:focus {
+  outline: none;
 }
 
-* .App .home .contact_form .login .login_bottom .checkbox input {
-  width: 18px;
-  height: 18px;
+* .App .home .contact_form .login .login_bottom .login_checkbox {
+  margin-bottom: 15px;
 }
 
-* .App .home .contact_form .login .login_bottom .checkbox input {
+* .App .home .contact_form .login .login_bottom .login_checkbox input {
   margin-right: 10px;
+  width: 17px;
+  height: 17px;
 }
 
 * .App .home .contact_form .login .login_bottom button {
@@ -196,30 +219,120 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 * .App .home .contact_form .login .login_bottom button:hover {
   background-color: lightgray;
 }
 
-* .App .home .contact_form .login .login_bottom .links {
-  margin-bottom: 20px;
+* .App .home .contact_form .login .login_bottom .login_links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-* .App .home .contact_form .login .login_bottom .links span {
-  text-decoration: none;
   color: #946b45;
 }
 
+* .App .home .contact_form .login .login_bottom .login_links span {
+  cursor: pointer;
+}
+
+* .App .home .contact_form .login .login_bottom .login_links span:hover {
+  text-decoration: underline;
+}
+
 * .App .home .contact_form .signup {
-  display: none;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* .App .home .contact_form .signup .signup_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .home .contact_form .signup .signup_header .signup_title {
+  font-weight: 200;
+}
+
+* .App .home .contact_form .signup .signup_header .fa-times {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+* .App .home .contact_form .signup .signup_bottom .signup_data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* .App .home .contact_form .signup .signup_bottom .signup_data input {
+  border: none;
+  font-size: 17px;
+  padding: 8px 0px;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+* .App .home .contact_form .signup .signup_bottom .signup_data input:focus {
+  outline: none;
+}
+
+* .App .home .contact_form .signup .signup_bottom button {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+* .App .home .contact_form .signup .signup_bottom button:hover {
+  background-color: lightgray;
+}
+
+* .App .home .contact_form .signup .signup_bottom .signup_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #946b45;
+}
+
+* .App .home .contact_form .signup .signup_bottom .signup_links span {
+  cursor: pointer;
+}
+
+* .App .home .contact_form .signup .signup_bottom .signup_links span:hover {
+  text-decoration: underline;
 }
 
 * .App .home .inactive {

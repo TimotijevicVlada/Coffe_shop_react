@@ -83,7 +83,7 @@
         top: 30px;
         right: 30px;
         width: 380px;
-        height: 430px;
+        height: 400px;
         padding: 15px;
         border-radius: 10px;
         background-color: white;
@@ -101,31 +101,40 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          .title {
-            font-weight: 200;
+          .login_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .login_title {
+              font-weight: 200;
+            }
+            .fa-times {
+              font-size: 20px;
+              cursor: pointer;
+              padding: 8px;
+            }
           }
           .login_bottom {
-            .data {
-              width: 100%;
+            .login_data {
+              display: flex;
+              flex-direction: column;
               input {
-                width: 100%;
-                outline: none;
                 border: none;
+                font-size: 17px;
+                padding: 8px 0px;
                 border-bottom: 1px solid black;
-                padding: 15px 0px;
-                font-size: 18px;
-                margin-bottom: 25px;
+                margin-bottom: 15px;
+                &:focus {
+                  outline: none;
+                }
               }
             }
-            .checkbox {
-              margin-bottom: 25px;
-              input {
-                width: 18px;
-                height: 18px;
-              }
+            .login_checkbox {
+              margin-bottom: 15px;
               input {
                 margin-right: 10px;
-                
+                width: 17px;
+                height: 17px;
               }
             }
             button {
@@ -135,24 +144,82 @@
               border-radius: 10px;
               border: none;
               cursor: pointer;
-              margin-bottom: 25px;
+              margin-bottom: 15px;
               &:hover {
                 background-color: lightgray;
               }
             }
-            .links {
-              margin-bottom: 20px;
+            .login_links {
               display: flex;
               justify-content: space-between;
+              color: rgb(148, 107, 69);
               span {
-                text-decoration: none;
-                color: rgb(148, 107, 69);
+                cursor: pointer;
+                &:hover {
+                  text-decoration: underline;
+                }
               }
             }
           }
         }
         .signup {
-          display: none;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .signup_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .signup_title {
+              font-weight: 200;
+            }
+            .fa-times {
+              font-size: 20px;
+              cursor: pointer;
+              padding: 8px;
+            }
+          }
+          .signup_bottom {
+            .signup_data {
+              display: flex;
+              flex-direction: column;
+              input {
+                border: none;
+                font-size: 17px;
+                padding: 8px 0px;
+                border-bottom: 1px solid black;
+                margin-bottom: 15px;
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+            button {
+              width: 100%;
+              font-size: 18px;
+              padding: 8px 0px;
+              border-radius: 10px;
+              border: none;
+              cursor: pointer;
+              margin-bottom: 15px;
+              &:hover {
+                background-color: lightgray;
+              }
+            }
+            .signup_links {
+              display: flex;
+              justify-content: flex-end;
+              color: rgb(148, 107, 69);
+              span {
+                cursor: pointer;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
         }
       }
       .inactive {
