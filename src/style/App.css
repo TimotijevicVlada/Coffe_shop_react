@@ -219,6 +219,12 @@
   outline: none;
 }
 
+* .App .home .contact_form .login .login_bottom .login_data .login_email .login_error,
+* .App .home .contact_form .login .login_bottom .login_data .login_pass .login_error {
+  font-size: 13px;
+  color: red;
+}
+
 * .App .home .contact_form .login .login_bottom .login_data .login_pass {
   position: relative;
 }
