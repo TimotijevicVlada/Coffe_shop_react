@@ -1,6 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
+
+  const [eyeLogin, setEyeLogin] = useState(true);
+  const [eyeSignup, setEyeSignup] = useState(true);
+
+
+
+
+
+
+
   return (
     <div className={contact ? "contact_form" : "inactive"}>
       {switchContact === "login" ? (
@@ -12,8 +22,13 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
 
           <div className="login_bottom">
             <div className="login_data">
-              <input type="email" placeholder="Enter your email" />
-              <input type="password" placeholder="Enter your password" />
+              <div className="login_email">
+                <input type="email" placeholder="Email" />
+              </div>
+              <div className="login_pass">
+                <input type={eyeLogin ? "password" : "text"} placeholder="Password" />
+                {eyeLogin ? <i onClick={() => setEyeLogin(false)} className="far fa-eye"></i> : <i onClick={() => setEyeLogin(true)} className="far fa-eye-slash"></i>}
+              </div>
             </div>
             <div className="login_checkbox">
               <input type="checkbox" />
@@ -35,10 +50,19 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
 
           <div className="signup_bottom">
             <div className="signup_data">
-              <input type="text" placeholder="Enter your name" />
-              <input type="email" placeholder="Enter your email" />
-              <input type="password" placeholder="Enter your password" />
-              <input type="password" placeholder="Confirm password" />
+              <div className="name_signup">
+                <input type="text" placeholder="Name" />
+              </div>
+              <div className="email_signup">
+                <input type="email" placeholder="Email" />
+              </div>
+              <div className="pass_signup">
+                <input type={eyeSignup ? "password" : "text"} placeholder="Password" />
+              </div>
+              <div className="confirm_signup">
+                <input type={eyeSignup ? "password" : "text"} placeholder="Confirm password" />
+                {eyeSignup ? <i onClick={() => setEyeSignup(false)} className="far fa-eye"></i> : <i onClick={() => setEyeSignup(true)} className="far fa-eye-slash"></i>}
+              </div>
             </div>
             <button>Signup</button>
             <div className="signup_links">
