@@ -3,6 +3,7 @@ import './style/App.css';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Products from "./components/Products";
+import MessageUs from "./components/MessageUs";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         setSwitchContact={setSwitchContact}
       />
       <Products />
+      <MessageUs />
     </div>
   );
 }
