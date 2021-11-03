@@ -6,29 +6,91 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
   const [loginValue, setLoginValue] = useState({ email: "", password: ""});
   const [loginError, setLoginError] = useState({ email: "", password: ""});
 
+  const [signupValue, setSignupValue] = useState({name: "", email: "", password: "", confirmPassword: ""});
+  const [signupError, setSignupError] = useState({name: "", email: "", password: "", confirmPassword: ""});
+
   const validateLogin = (e) => {
     e.preventDefault();
+
+    let errors = {
+      email: "",
+      password: ""
+    };
     //Validate email
     if (!loginValue.email) {
       console.log("Nema podataka za email");
-      setLoginError({ ...loginError, email: "Email required!" });
+      errors = {...errors, email: "Email required"};
     } else if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(loginValue.email)) {
       console.log("Pogresni podaci emaila");
-      setLoginError({ ...loginError, email: "Email adress is invalid!" });
+      errors = {...errors, email: "Email address is invalid!"};
     } else {
       console.log("Dobri podaci za mail")
-      setLoginError({ ...loginError, email: "" });
+      errors = {...errors, email: ""};
     }
 
     //Validate pass
     if (!loginValue.password) {
-      setLoginError({ ...loginError, password: "Password is required!" });
+      errors = {...errors, password: "Password is required"};
     } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(loginValue.password)) {
-      setLoginError({...loginError, password: "Password require uppercase, lowercase and number!"});
+      errors = {...errors, password: "Password require uppercase, lowercase and number!"};
     } else {
-      setLoginError({ ...loginError, password: "" });
+      errors = {...errors, password: ""};
     }
+
+    setLoginError(errors);
+
+    if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(loginValue.email) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(loginValue.password)) {
+        alert("Succesfull LOGIN!");
+    }
+
   };
+
+  const validateSignup = (e) => {
+    e.preventDefault();
+    let errors = {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: ""
+    };
+    //Validate name
+    if (!signupValue.name.trim()) {
+      errors = {...errors, name: "Name required"};
+    } else if (!/^[A-Z][a-z]{2,}/.test(signupValue.name.trim())) {
+      errors = {...errors, name: "Name is invalid!"};
+    } else {
+      errors = {...errors, name: ""};
+    }
+    //Validate email
+    if (!signupValue.email) {
+      errors = {...errors, email: "Email required"};
+    } else if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(signupValue.email)) {
+      errors = {...errors, email: "Email address is invalid!"};
+    } else {
+      errors = {...errors, email: ""};
+    }
+    //Validate pass
+    if (!signupValue.password) {
+      errors = {...errors, password: "Password is required"};
+    } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.password)) {
+      errors = {...errors, password: "Password require uppercase, lowercase and number!"};
+    } else {
+      errors = {...errors, password: ""};
+    }
+    //Validate confirm password
+    if (!signupValue.confirmPassword) {
+      errors = {...errors, confirmPassword: "Confirm password is required"};
+    } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.confirmPassword)) {
+      errors = {...errors, confirmPassword: "Password require uppercase, lowercase and number!"};
+    } else {
+      errors = {...errors, confirmPassword: ""};
+    }
+    setSignupError(errors);
+
+    if(/^[A-Z][a-z]{2,}/.test(signupValue.name.trim()) && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(signupValue.email) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.password) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.confirmPassword)) {
+      alert("Succesfull registration!");
+    }
+  }
 
   return (
     <div className={contact ? "contact_form" : "inactive"}>
@@ -46,6 +108,7 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
                   onChange={(e) =>
                     setLoginValue({ ...loginValue, email: e.target.value })
                   }
+                  value={loginValue.email}
                   type="text"
                   placeholder="Email"
                 />
@@ -56,6 +119,7 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
                   onChange={(e) =>
                     setLoginValue({ ...loginValue, password: e.target.value })
                   }
+                  value={loginValue.password}
                   type={eyeLogin ? "password" : "text"}
                   placeholder="Password"
                 />
@@ -85,7 +149,7 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
           </div>
         </form>
       ) : (
-        <form className="signup">
+        <form onSubmit={validateSignup} className="signup">
           <div className="signup_header">
             <h2 className="signup_title">Signup</h2>
             <i onClick={() => setContact(false)} className="fas fa-times"></i>
@@ -94,22 +158,30 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
           <div className="signup_bottom">
             <div className="signup_data">
               <div className="name_signup">
-                <input type="text" placeholder="Name" />
+                <input onChange={(e) => setSignupValue({...signupValue, name: e.target.value})} value={signupValue.name} type="text" placeholder="Name" />
+                <p className="signup_error">{signupError.name}</p>
               </div>
               <div className="email_signup">
-                <input type="email" placeholder="Email" />
+                <input onChange={(e) => setSignupValue({...signupValue, email: e.target.value})} value={signupValue.email} type="text" placeholder="Email" />
+                <p className="signup_error">{signupError.email}</p>
               </div>
               <div className="pass_signup">
                 <input
+                  onChange={(e) => setSignupValue({...signupValue, password: e.target.value})}
+                  value={signupValue.password}
                   type={eyeSignup ? "password" : "text"}
                   placeholder="Password"
                 />
+                <p className="signup_error">{signupError.password}</p>
               </div>
               <div className="confirm_signup">
                 <input
+                  onChange={(e) => setSignupValue({...signupValue, confirmPassword: e.target.value})}
+                  value={signupValue.confirmPassword}
                   type={eyeSignup ? "password" : "text"}
                   placeholder="Confirm password"
                 />
+                <p className="signup_error">{signupError.confirmPassword}</p>
                 {eyeSignup ? (
                   <i
                     onClick={() => setEyeSignup(false)}
@@ -123,7 +195,7 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
                 )}
               </div>
             </div>
-            <button>Signup</button>
+            <button type="submit">Signup</button>
             <div className="signup_links">
               <span onClick={() => setSwitchContact("login")}>login</span>
             </div>

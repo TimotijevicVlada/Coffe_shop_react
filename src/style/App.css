@@ -5,6 +5,19 @@
   margin: 0;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #946b45;
+  border-radius: 10px;
+}
+
 * .App {
   font-family: "Poppins", sans-serif;
 }
@@ -58,6 +71,10 @@
   font-size: 20px;
   margin-right: 15px;
   cursor: pointer;
+}
+
+* .App .navbar .menu_right i:hover {
+  color: black;
 }
 
 * .App .home {
@@ -209,9 +226,9 @@
   width: 100%;
   border: none;
   font-size: 17px;
-  padding: 8px 0px;
+  padding: 8px 0px 2px 0px;
   border-bottom: 1px solid black;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 * .App .home .contact_form .login .login_bottom .login_data .login_email input:focus,
@@ -223,6 +240,7 @@
 * .App .home .contact_form .login .login_bottom .login_data .login_pass .login_error {
   font-size: 13px;
   color: red;
+  margin-bottom: 10px;
 }
 
 * .App .home .contact_form .login .login_bottom .login_data .login_pass {
@@ -347,9 +365,9 @@
   width: 100%;
   border: none;
   font-size: 17px;
-  padding: 8px 0px;
+  padding: 8px 0px 2px 0px;
   border-bottom: 1px solid black;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 * .App .home .contact_form .signup .signup_bottom .signup_data .name_signup input:focus,
@@ -357,6 +375,15 @@
 * .App .home .contact_form .signup .signup_bottom .signup_data .pass_signup input:focus,
 * .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup input:focus {
   outline: none;
+}
+
+* .App .home .contact_form .signup .signup_bottom .signup_data .name_signup .signup_error,
+* .App .home .contact_form .signup .signup_bottom .signup_data .email_signup .signup_error,
+* .App .home .contact_form .signup .signup_bottom .signup_data .pass_signup .signup_error,
+* .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup .signup_error {
+  font-size: 13px;
+  color: red;
+  margin-bottom: 10px;
 }
 
 * .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup {

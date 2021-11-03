@@ -2,6 +2,16 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(148, 107, 69);
+    border-radius: 10px;
+  }
   .App {
     font-family: "Poppins", sans-serif;
     .navbar {
@@ -40,6 +50,9 @@
           font-size: 20px;
           margin-right: 15px;
           cursor: pointer;
+          &:hover {
+            color: black;
+          }
         }
       }
     }
@@ -130,9 +143,9 @@
                   width: 100%;
                   border: none;
                   font-size: 17px;
-                  padding: 8px 0px;
+                  padding: 8px 0px 2px 0px;
                   border-bottom: 1px solid black;
-                  margin-bottom: 15px;
+                  margin-bottom: 5px;
                   &:focus {
                     outline: none;
                   }
@@ -140,6 +153,7 @@
                 .login_error {
                   font-size: 13px;
                   color: red;
+                  margin-bottom: 10px;
                 }
               }
               .login_pass {
@@ -223,12 +237,17 @@
                   width: 100%;
                   border: none;
                   font-size: 17px;
-                  padding: 8px 0px;
+                  padding: 8px 0px 2px 0px;
                   border-bottom: 1px solid black;
-                  margin-bottom: 15px;
+                  margin-bottom: 5px;
                   &:focus {
                     outline: none;
                   }
+                }
+                .signup_error {
+                  font-size: 13px;
+                  color: red;
+                  margin-bottom: 10px;
                 }
               }
               .confirm_signup {
