@@ -12,12 +12,12 @@ const Navbar = ({ contact, setContact }) => {
                 <i className="fas fa-mug-hot"></i>
             </div>
             <div className="menu">
-                <span>Home</span>
-                <span>About</span>
-                <span>Menu</span>
-                <span>Products</span>
-                <span>Review</span>
-                <span>Blogs</span>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#popular">Popular</a>
+                <a href="#contact">Contact</a>
+                <a href="#rewiev">Review</a>
             </div>
             <div className="menu_right">
                 <i className="fas fa-shopping-cart"></i>

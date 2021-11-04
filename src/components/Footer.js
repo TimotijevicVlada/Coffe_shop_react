@@ -9,11 +9,26 @@ const Footer = () => {
             <h3>Our Branches</h3>
           </div>
           <div className="footer_info">
-            <span>Serbia</span>
-            <span>Spain</span>
-            <span>England</span>
-            <span>Russia</span>
-            <span>Greece</span>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Serbia</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Spain</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>England</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Russia</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Greece</span>
+            </div>
           </div>
         </div>
         <div className="footer_div">
@@ -21,11 +36,26 @@ const Footer = () => {
             <h3>Quick Links</h3>
           </div>
           <div className="footer_info">
-            <span>Home</span>
-            <span>About</span>
-            <span>Products</span>
-            <span>Rewiev</span>
-            <span>Contact Us</span>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Home</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>About</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Products</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Contact Us</span>
+            </div>
+            <div>
+              <i className="fas fa-arrow-right"></i>
+              <span>Greece</span>
+            </div>
           </div>
         </div>
         <div className="footer_div">
@@ -33,11 +63,26 @@ const Footer = () => {
             <h3>Contact Info</h3>
           </div>
           <div className="footer_info">
-            <span>+38163 / 11-88-180</span>
-            <span>+38111 / 128-429</span>
-            <span>timotijevicvlada@gmail.com</span>
-            <span>Belgrade, Serbia</span>
-            <span>New Belgrade</span>
+            <div>
+              <i className="fas fa-mobile-alt"></i>
+              <span>+38163 / 11-88-180</span>
+            </div>
+            <div>
+              <i className="fas fa-phone"></i>
+              <span>+38111 / 128-429</span>
+            </div>
+            <div>
+              <i className="fas fa-envelope"></i>
+              <span>timotijevicvlada@gmail.com</span>
+            </div>
+            <div>
+              <i className="fas fa-map-marker-alt"></i>
+              <span>Belgrade, Serbia</span>
+            </div>
+            <div>
+              <i className="fas fa-thumbtack"></i>
+              <span>New Belgrade</span>
+            </div>
           </div>
         </div>
         <div className="footer_div">
@@ -45,16 +90,33 @@ const Footer = () => {
             <h3>Social Media</h3>
           </div>
           <div className="footer_info">
-            <span>Facebook</span>
-            <span>Instgram</span>
-            <span>Twitter</span>
-            <span>LinkedIn</span>
-            <span>Tik Tok</span>
+            <div>
+              <i className="fab fa-facebook"></i>
+              <span>Facebook</span>
+            </div>
+            <div>
+              <i className="fab fa-instagram"></i>
+              <span>Instgram</span>
+            </div>
+            <div>
+              <i className="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </div>
+            <div>
+              <i className="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </div>
+            <div>
+              <i className="fab fa-tiktok"></i>
+              <span>Tik Tok</span>
+            </div>
           </div>
         </div>
       </div>
       <div className="footer_lower">
-            <h3>Coffee shop by | <span>Vladimir Timotijevic</span></h3>
+        <h3>
+          Coffee shop by | <span>Vladimir Timotijevic</span>
+        </h3>
       </div>
     </div>
   );

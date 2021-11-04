@@ -3,8 +3,12 @@ import {products} from "../data";
 
 const Products = () => {
     return (
-        <div className="products">
-            {products.map(item => (
+        <div className="products" id="products">
+            <div className="products_title">
+                <h1>Our products</h1>
+            </div>
+            <div className="products_wrapper">
+                {products.map(item => (
                 <div className="item" key={item.id}>
                     <img src={`coffee_img/${item.img}`} alt={item.name} />
                     <div className="info">
@@ -22,6 +26,8 @@ const Products = () => {
                     </div>
                 </div>
             ))}
+            </div>
+            
         </div>
     )
 }

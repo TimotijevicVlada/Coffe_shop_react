@@ -3,7 +3,7 @@ import Contact from './Contact';
 
 const Home = ({contact, setContact, switchContact, setSwitchContact}) => {
     return (
-        <div className="home">
+        <div className="home" id="home">
             <div className="header">
                 <span className="text">Enjoy the best coffee in the city</span>
                 <button>Order your coffee</button>

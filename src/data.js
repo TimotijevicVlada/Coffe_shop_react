@@ -6,7 +6,8 @@ export const products = [
         price: {
             current: 14,
             old: 16
-        }
+        },
+        stars: 5
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const products = [
         price: {
             current: 15,
             old: 18
-        }
+        },
+        stars: 4.9
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const products = [
         price: {
             current: 12,
             old: 15
-        }
+        },
+        stars: 4
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ export const products = [
         price: {
             current: 10,
             old: 12
-        }
+        },
+        stars: 4
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ export const products = [
         price: {
             current: 17,
             old: 20
-        }
+        },
+        stars: 4.5
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ export const products = [
         price: {
             current: 16,
             old: 17
-        }
+        },
+        stars: 4.8
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ export const products = [
         price: {
             current: 14,
             old: 17
-        }
+        },
+        stars: 4.5
     },
     {
         id: 8,
@@ -69,6 +76,7 @@ export const products = [
         price: {
             current: 13,
             old: 14
-        }
+        },
+        stars: 4
     }
 ]

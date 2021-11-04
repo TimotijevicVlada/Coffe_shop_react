@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -34,10 +35,11 @@
         }
       }
       .menu {
-        span {
+        a {
           color: rgb(148, 107, 69);
           font-size: 18px;
           margin-right: 10px;
+          text-decoration: none;
           cursor: pointer;
           &:hover {
             text-decoration: underline;
@@ -293,21 +295,34 @@
     }
     .products {
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      .item {
+      padding: 0px 100px;
+      .products_title {
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          font-weight: 200;
+          color: rgb(148, 107, 69);
+        }
+      }
+      .products_wrapper {
+        height: 85%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .item {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 300px;
         height: 350px;
+        margin: 10px 0px;
         border-radius: 10px;
-        background-color: rgb(233, 233, 233);
+        background-color: rgb(235, 235, 199);
         cursor: pointer;
-        margin: 10px;
         overflow: hidden;
         &:hover img {
           transform: scale(1.1);
@@ -359,6 +374,80 @@
             &:hover {
               background-color: rgb(148, 107, 69);
               color: beige;
+            }
+          }
+        }
+      }
+      }
+      
+    }
+    .popular {
+      height: 100vh;
+      padding: 0px 100px;
+      .popular_title {
+        height: 15vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+          font-weight: 200;
+          color: rgb(148, 107, 69);
+        }
+      }
+      .popular_item_wrapper {
+      
+        height: 85vh;
+        display: flex;
+        align-items: center;
+        .rec-carousel-wrapper {
+         
+          display: flex;
+          justify-content: center;
+          .rec-carousel {
+            background-color: rgb(235, 235, 199);
+            border-radius: 15px;
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 30px;
+              color: rgb(148, 107, 69);;
+              background-color: transparent;
+              border: none;
+              font-size: 40px;
+              outline: none;
+              box-shadow: none;
+              cursor: pointer;
+              &:hover {
+                background-color: rgb(235, 235, 199);
+              }
+            }
+            .rec-slider-container {
+       
+             
+                  .rec-carousel-item {
+                    
+                    display: flex;
+                    align-items: center;
+                    
+                    cursor: pointer;
+                  }
+            }
+          }
+          .rec-pagination {
+            display: flex;
+            align-items: center;
+            .rec-dot {
+              border: 1px solid rgb(148, 107, 69);
+              box-shadow: none;
+              width: 12px;
+              height: 12px;
+            }
+            .rec-dot_active {
+              width: 14px;
+              height: 14px;
+              background-color: rgb(148, 107, 69);
             }
           }
         }
@@ -472,24 +561,32 @@
       }
     }
     .footer {
-      margin: 0px 60px;
+      margin: 0px 100px;
       .footer_upper {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         padding-bottom: 20px;
         .footer_div {
+          width: 270px;
           .footer_title {
             padding: 10px 0px;
             color: rgb(160, 123, 88);
           }
           .footer_info {
-            display: flex;
-            flex-direction: column;
             line-height: 35px;
-            span {
+            div {
               color: rgb(148, 107, 69);
+              span {
+                margin-left: 5px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                &:hover {
+                  margin-left: 17px;
+                }
+              }
             }
+            
           }
         }
       }
