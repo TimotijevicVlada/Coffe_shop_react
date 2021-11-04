@@ -77,10 +77,11 @@
           font-size: 70px;
           line-height: 1.2em;
         }
-        button {
+        a {
+          text-decoration: none;
           width: 200px;
           align-items: center;
-          padding: 10px;
+          padding: 5px 10px;
           border: none;
           background-color: rgb(148, 107, 69);
           color: beige;
@@ -292,6 +293,83 @@
       .inactive {
         display: none;
       }
+      .fa-chevron-up {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1;
+        color: rgb(148, 107, 69);
+        font-size: 30px;
+        padding: 15px;
+        cursor: pointer;
+        &:hover {
+          color: rgb(180, 147, 116);
+        }
+      }
+    }
+    .about {
+      padding: 0px 100px;
+      .about_title {
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          font-weight: 200;
+          color: rgb(148, 107, 69);
+        }
+      }
+      .about_content {
+        height: 85vh;
+
+        .about_lower {
+          display: flex;
+          border-radius: 15px;
+          height: 80%;
+          overflow: hidden;
+          background-color: rgb(235, 235, 199);
+          .about_img {
+            width: 50%;
+            img {
+              width: 100%;
+            }
+          }
+          .about_info {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+              font-weight: 200;
+              color: rgb(148, 107, 69);
+            }
+            .desc {
+              text-indent: 25px;
+            }
+            .about_btn {
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 50px;
+                a {
+                  text-decoration: none;
+                  font-size: 17px;
+                  padding: 3px 10px;
+                  margin-top: 10px;
+                  border: none;
+                  background-color: rgb(148, 107, 69);
+                  color: white;
+                  cursor: pointer;
+                  border-radius: 5px;
+                  &:hover {
+                    background-color: rgb(177, 139, 104);
+                  }
+                }
+              
+            }
+          }
+        }
+      }
     }
     .products {
       min-height: 100vh;
@@ -313,73 +391,72 @@
         align-items: center;
         flex-wrap: wrap;
         .item {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 350px;
-        margin: 10px 0px;
-        border-radius: 10px;
-        background-color: rgb(235, 235, 199);
-        cursor: pointer;
-        overflow: hidden;
-        &:hover img {
-          transform: scale(1.1);
-        }
-        img {
-          width: 40%;
-          transition: all 0.4s ease;
-          margin-bottom: 40px;
-        }
-        .info {
-          position: absolute;
-          bottom: 7px;
-          text-align: center;
-          .name {
-            font-weight: 200;
-          }
-          .price {
-            .current {
-              font-size: 20px;
-              margin-right: 5px;
-            }
-            .old {
-              text-decoration: line-through;
-            }
-          }
-          .stars {
-            i {
-              color: gold;
-            }
-          }
-        }
-        &:hover .events {
-          right: 20px;
-        }
-        .events {
-          position: absolute;
-          right: -45px;
+          position: relative;
           display: flex;
-          flex-direction: column;
-          transition: all 0.4s ease;
-          i {
-            padding: 10px;
-            background-color: white;
-            border-radius: 3px;
-            margin: 5px 0px;
-            font-size: 22px;
-            cursor: pointer;
-            z-index: 2;
-            &:hover {
-              background-color: rgb(148, 107, 69);
-              color: beige;
+          justify-content: center;
+          align-items: center;
+          width: 300px;
+          height: 350px;
+          margin: 10px 0px;
+          border-radius: 10px;
+          background-color: rgb(235, 235, 199);
+          cursor: pointer;
+          overflow: hidden;
+          &:hover img {
+            transform: scale(1.1);
+          }
+          img {
+            width: 40%;
+            transition: all 0.4s ease;
+            margin-bottom: 40px;
+          }
+          .info {
+            position: absolute;
+            bottom: 7px;
+            text-align: center;
+            .name {
+              font-weight: 200;
+            }
+            .price {
+              .current {
+                font-size: 20px;
+                margin-right: 5px;
+              }
+              .old {
+                text-decoration: line-through;
+              }
+            }
+            .stars {
+              i {
+                color: gold;
+              }
+            }
+          }
+          &:hover .events {
+            right: 20px;
+          }
+          .events {
+            position: absolute;
+            right: -45px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s ease;
+            i {
+              padding: 10px;
+              background-color: white;
+              border-radius: 3px;
+              margin: 5px 0px;
+              font-size: 22px;
+              cursor: pointer;
+              z-index: 2;
+              &:hover {
+                background-color: rgb(148, 107, 69);
+                color: beige;
+              }
             }
           }
         }
       }
-      }
-      
     }
     .popular {
       height: 100vh;
@@ -396,12 +473,10 @@
         }
       }
       .popular_item_wrapper {
-      
         height: 85vh;
         display: flex;
         align-items: center;
         .rec-carousel-wrapper {
-         
           display: flex;
           justify-content: center;
           .rec-carousel {
@@ -412,7 +487,7 @@
               justify-content: center;
               align-items: center;
               padding: 30px;
-              color: rgb(148, 107, 69);;
+              color: rgb(148, 107, 69);
               background-color: transparent;
               border: none;
               font-size: 40px;
@@ -424,15 +499,12 @@
               }
             }
             .rec-slider-container {
-       
-             
-                  .rec-carousel-item {
-                    
-                    display: flex;
-                    align-items: center;
-                    
-                    cursor: pointer;
-                  }
+              .rec-carousel-item {
+                display: flex;
+                align-items: center;
+
+                cursor: pointer;
+              }
             }
           }
           .rec-pagination {
@@ -586,7 +658,6 @@
                 }
               }
             }
-            
           }
         }
       }

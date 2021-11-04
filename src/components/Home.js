@@ -6,7 +6,7 @@ const Home = ({contact, setContact, switchContact, setSwitchContact}) => {
         <div className="home" id="home">
             <div className="header">
                 <span className="text">Enjoy the best coffee in the city</span>
-                <button>Order your coffee</button>
+                <a href="#products">Order your coffee</a>
             </div>
             <Contact 
                 contact={contact} 
@@ -14,6 +14,7 @@ const Home = ({contact, setContact, switchContact, setSwitchContact}) => {
                 switchContact={switchContact}
                 setSwitchContact={setSwitchContact}
             />
+            <a href="#navbar"><i className="fas fa-chevron-up"></i></a>
         </div>
     )
 }

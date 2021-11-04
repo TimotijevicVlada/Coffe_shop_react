@@ -6,7 +6,7 @@ const Navbar = ({ contact, setContact }) => {
 
 
     return (
-        <div className="navbar">
+        <div className="navbar" id="navbar">
             <div className="logo">
                 <span>Coffee</span>
                 <i className="fas fa-mug-hot"></i>

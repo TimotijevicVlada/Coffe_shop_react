@@ -6,6 +6,7 @@ import Products from "./components/Products";
 import MessageUs from "./components/MessageUs";
 import Footer from "./components/Footer";
 import Popular from "./components/Popular";
+import About from "./components/About";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         switchContact={switchContact} 
         setSwitchContact={setSwitchContact}
       />
+      <About />
       <Products />
       <Popular />
       <MessageUs />

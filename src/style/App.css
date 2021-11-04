@@ -112,12 +112,13 @@
   line-height: 1.2em;
 }
 
-* .App .home .header button {
+* .App .home .header a {
+  text-decoration: none;
   width: 200px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  padding: 5px 10px;
   border: none;
   background-color: #946b45;
   color: beige;
@@ -126,7 +127,7 @@
   cursor: pointer;
 }
 
-* .App .home .header button:hover {
+* .App .home .header a:hover {
   background-color: #cbb595;
   color: #946b45;
 }
@@ -434,6 +435,115 @@
 
 * .App .home .inactive {
   display: none;
+}
+
+* .App .home .fa-chevron-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+  color: #946b45;
+  font-size: 30px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+* .App .home .fa-chevron-up:hover {
+  color: #b49374;
+}
+
+* .App .about {
+  padding: 0px 100px;
+}
+
+* .App .about .about_title {
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .about .about_title h1 {
+  font-weight: 200;
+  color: #946b45;
+}
+
+* .App .about .about_content {
+  height: 85vh;
+}
+
+* .App .about .about_content .about_lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 15px;
+  height: 80%;
+  overflow: hidden;
+  background-color: #ebebc7;
+}
+
+* .App .about .about_content .about_lower .about_img {
+  width: 50%;
+}
+
+* .App .about .about_content .about_lower .about_img img {
+  width: 100%;
+}
+
+* .App .about .about_content .about_lower .about_info {
+  width: 50%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* .App .about .about_content .about_lower .about_info h2 {
+  font-weight: 200;
+  color: #946b45;
+}
+
+* .App .about .about_content .about_lower .about_info .desc {
+  text-indent: 25px;
+}
+
+* .App .about .about_content .about_lower .about_info .about_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 50px;
+}
+
+* .App .about .about_content .about_lower .about_info .about_btn a {
+  text-decoration: none;
+  font-size: 17px;
+  padding: 3px 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #946b45;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+* .App .about .about_content .about_lower .about_info .about_btn a:hover {
+  background-color: #b18b68;
 }
 
 * .App .products {
