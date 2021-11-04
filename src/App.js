@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import MessageUs from "./components/MessageUs";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       />
       <Products />
       <MessageUs />
+      <Footer />
     </div>
   );
 }

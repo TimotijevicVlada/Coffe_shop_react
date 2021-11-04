@@ -606,12 +606,16 @@
   padding: 0px 50px;
 }
 
-* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number {
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number {
   width: 100%;
   position: relative;
 }
 
-* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name input, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email input, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number input {
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name input,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email input,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number input {
   background-color: #ebebc7;
   font-size: 17px;
   padding: 10px 0px 10px 30px;
@@ -620,11 +624,15 @@
   border-bottom: 1px solid black;
 }
 
-* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name input:focus, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email input:focus, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number input:focus {
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name input:focus,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email input:focus,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number input:focus {
   outline: none;
 }
 
-* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name i, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email i, * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number i {
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_name i,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_email i,
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_number i {
   position: absolute;
   top: 12px;
   z-index: 1;
@@ -645,6 +653,10 @@
   margin-top: 10px;
   border: none;
   border-bottom: 1px solid black;
+}
+
+* .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_textarea textarea:focus {
+  outline: none;
 }
 
 * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_textarea i {
@@ -675,5 +687,56 @@
 
 * .App .messageUs_wrapper .messageUs_info .message_inputs .inputs_wrapper .message_now button:hover {
   background-color: #a07b58;
+}
+
+* .App .footer {
+  margin: 0px 60px;
+}
+
+* .App .footer .footer_upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+* .App .footer .footer_upper .footer_div .footer_title {
+  padding: 10px 0px;
+  color: #a07b58;
+}
+
+* .App .footer .footer_upper .footer_div .footer_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 35px;
+}
+
+* .App .footer .footer_upper .footer_div .footer_info span {
+  color: #946b45;
+}
+
+* .App .footer .footer_lower {
+  border-top: 1px solid #946b45;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+* .App .footer .footer_lower h3 {
+  font-weight: 200;
+  color: #946b45;
+}
+
+* .App .footer .footer_lower h3 span {
+  font-weight: 700;
 }
 /*# sourceMappingURL=App.css.map */

@@ -405,7 +405,9 @@
           }
           .inputs_wrapper {
             padding: 0px 50px;
-            .message_name, .message_email, .message_number {
+            .message_name,
+            .message_email,
+            .message_number {
               width: 100%;
               position: relative;
               input {
@@ -438,6 +440,9 @@
                 margin-top: 10px;
                 border: none;
                 border-bottom: 1px solid black;
+                &:focus {
+                  outline: none;
+                }
               }
               i {
                 position: absolute;
@@ -445,7 +450,6 @@
                 top: 12px;
                 color: rgb(148, 107, 69);
               }
-              
             }
             .message_now {
               display: flex;
@@ -463,6 +467,41 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+    .footer {
+      margin: 0px 60px;
+      .footer_upper {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        .footer_div {
+          .footer_title {
+            padding: 10px 0px;
+            color: rgb(160, 123, 88);
+          }
+          .footer_info {
+            display: flex;
+            flex-direction: column;
+            line-height: 35px;
+            span {
+              color: rgb(148, 107, 69);
+            }
+          }
+        }
+      }
+      .footer_lower {
+        border-top: 1px solid rgb(148, 107, 69);
+        text-align: center;
+        padding: 20px 0px;
+        h3 {
+          font-weight: 200;
+          color: rgb(148, 107, 69);
+          span {
+            font-weight: 700;
           }
         }
       }
