@@ -19,13 +19,10 @@ function App() {
       <Navbar 
         setContact={setContact} 
         contact={contact}
-      />
-      <Home 
-        contact={contact} 
-        setContact={setContact} 
         switchContact={switchContact} 
         setSwitchContact={setSwitchContact}
       />
+      <Home />
       <About />
       <Products />
       <Popular />

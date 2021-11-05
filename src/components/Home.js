@@ -1,20 +1,26 @@
-import React from 'react';
-import Contact from './Contact';
+import React, {useState} from 'react';
 
-const Home = ({contact, setContact, switchContact, setSwitchContact}) => {
+const Home = () => {
+
+    const [arrowUp, setArrowUp] = useState(false);
+
+    const showArrow = () => {
+        if(window.scrollY >= 100) {
+            setArrowUp(true);
+        } else {
+            setArrowUp(false);
+        }
+    }
+
+    window.addEventListener("scroll", showArrow);
+
     return (
         <div className="home" id="home">
             <div className="header">
                 <span className="text">Enjoy the best coffee in the city</span>
                 <a href="#products">Order your coffee</a>
             </div>
-            <Contact 
-                contact={contact} 
-                setContact={setContact} 
-                switchContact={switchContact}
-                setSwitchContact={setSwitchContact}
-            />
-            <a href="#navbar"><i className="fas fa-chevron-up"></i></a>
+            <a href="#home"><i className={arrowUp ? "fas fa-chevron-up" : "fas fa-chevron-up hidden"}></i></a>
         </div>
     )
 }

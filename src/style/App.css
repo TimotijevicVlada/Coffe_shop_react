@@ -24,7 +24,11 @@
 }
 
 * .App .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 8vh;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,14 +39,16 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  background-color: #ebebc7;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: beige;
 }
 
 * .App .navbar .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #946b45;
 }
 
 * .App .navbar .logo span {
@@ -54,22 +60,26 @@
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 27px;
+  margin-top: 2px;
 }
 
 * .App .navbar .menu a {
-  color: #946b45;
   font-size: 18px;
   margin-right: 10px;
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 
 * .App .navbar .menu a:hover {
   text-decoration: underline;
 }
 
+* .App .navbar .menu_right {
+  position: relative;
+}
+
 * .App .navbar .menu_right i {
-  color: #946b45;
   font-size: 20px;
   margin-right: 15px;
   cursor: pointer;
@@ -79,8 +89,328 @@
   color: black;
 }
 
+* .App .navbar .menu_right .contact_form {
+  position: absolute;
+  top: 60px;
+  right: -200px;
+  width: 380px;
+  height: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  -webkit-animation: fadeIn 0.4s linear;
+          animation: fadeIn 0.4s linear;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+* .App .navbar .menu_right .contact_form .login {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: fadeLogin 0.6s linear;
+          animation: fadeLogin 0.6s linear;
+}
+
+@-webkit-keyframes fadeLogin {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeLogin {
+  0% {
+    opacity: 0;
+  }
+}
+
+* .App .navbar .menu_right .contact_form .login .login_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_header .login_title {
+  color: #946b45;
+  font-weight: 200;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_header .fa-times {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  color: #946b45;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_email input,
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass input {
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  padding: 8px 0px 2px 0px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_email input:focus,
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass input:focus {
+  outline: none;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_email .login_error,
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass .login_error {
+  font-size: 13px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass {
+  position: relative;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass .far {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_checkbox {
+  margin-bottom: 15px;
+  color: #946b45;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_checkbox input {
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom button {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom button:hover {
+  background-color: lightgray;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #946b45;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_links span {
+  cursor: pointer;
+}
+
+* .App .navbar .menu_right .contact_form .login .login_bottom .login_links span:hover {
+  text-decoration: underline;
+}
+
+* .App .navbar .menu_right .contact_form .signup {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: fadeSignup 0.6s linear;
+          animation: fadeSignup 0.6s linear;
+}
+
+@-webkit-keyframes fadeSignup {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeSignup {
+  0% {
+    opacity: 0;
+  }
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_header .signup_title {
+  font-weight: 200;
+  color: #946b45;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_header .fa-times {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  color: #946b45;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .name_signup input,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .email_signup input,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .pass_signup input,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup input {
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  padding: 8px 0px 2px 0px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .name_signup input:focus,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .email_signup input:focus,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .pass_signup input:focus,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup input:focus {
+  outline: none;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .name_signup .signup_error,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .email_signup .signup_error,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .pass_signup .signup_error,
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup .signup_error {
+  font-size: 13px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup {
+  position: relative;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup .far {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom button {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom button:hover {
+  background-color: lightgray;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #946b45;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_links span {
+  cursor: pointer;
+}
+
+* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_links span:hover {
+  text-decoration: underline;
+}
+
+* .App .navbar .menu_right .inactive {
+  display: none;
+}
+
+* .App .scroll {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 5.5vh;
+  background-color: #ebebc7;
+  color: #946b45;
+}
+
 * .App .home {
-  height: 92vh;
+  height: 100vh;
   background: url(../image/coffee_home.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -91,7 +421,6 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0px 20px;
-  position: relative;
 }
 
 * .App .home .header {
@@ -132,311 +461,6 @@
   color: #946b45;
 }
 
-* .App .home .contact_form {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 380px;
-  height: 400px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: white;
-  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  -webkit-animation: fadeIn 0.4s linear;
-          animation: fadeIn 0.4s linear;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
-    opacity: 0;
-  }
-}
-
-* .App .home .contact_form .login {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-animation: fadeLogin 0.6s linear;
-          animation: fadeLogin 0.6s linear;
-}
-
-@-webkit-keyframes fadeLogin {
-  0% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeLogin {
-  0% {
-    opacity: 0;
-  }
-}
-
-* .App .home .contact_form .login .login_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-* .App .home .contact_form .login .login_header .login_title {
-  font-weight: 200;
-}
-
-* .App .home .contact_form .login .login_header .fa-times {
-  font-size: 20px;
-  cursor: pointer;
-  padding: 8px;
-}
-
-* .App .home .contact_form .login .login_bottom .login_data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-* .App .home .contact_form .login .login_bottom .login_data .login_email input,
-* .App .home .contact_form .login .login_bottom .login_data .login_pass input {
-  width: 100%;
-  border: none;
-  font-size: 17px;
-  padding: 8px 0px 2px 0px;
-  border-bottom: 1px solid black;
-  margin-bottom: 5px;
-}
-
-* .App .home .contact_form .login .login_bottom .login_data .login_email input:focus,
-* .App .home .contact_form .login .login_bottom .login_data .login_pass input:focus {
-  outline: none;
-}
-
-* .App .home .contact_form .login .login_bottom .login_data .login_email .login_error,
-* .App .home .contact_form .login .login_bottom .login_data .login_pass .login_error {
-  font-size: 13px;
-  color: red;
-  margin-bottom: 10px;
-}
-
-* .App .home .contact_form .login .login_bottom .login_data .login_pass {
-  position: relative;
-}
-
-* .App .home .contact_form .login .login_bottom .login_data .login_pass .far {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-* .App .home .contact_form .login .login_bottom .login_checkbox {
-  margin-bottom: 15px;
-}
-
-* .App .home .contact_form .login .login_bottom .login_checkbox input {
-  margin-right: 10px;
-  width: 17px;
-  height: 17px;
-}
-
-* .App .home .contact_form .login .login_bottom button {
-  width: 100%;
-  font-size: 18px;
-  padding: 8px 0px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-* .App .home .contact_form .login .login_bottom button:hover {
-  background-color: lightgray;
-}
-
-* .App .home .contact_form .login .login_bottom .login_links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #946b45;
-}
-
-* .App .home .contact_form .login .login_bottom .login_links span {
-  cursor: pointer;
-}
-
-* .App .home .contact_form .login .login_bottom .login_links span:hover {
-  text-decoration: underline;
-}
-
-* .App .home .contact_form .signup {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-animation: fadeSignup 0.6s linear;
-          animation: fadeSignup 0.6s linear;
-}
-
-@-webkit-keyframes fadeSignup {
-  0% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeSignup {
-  0% {
-    opacity: 0;
-  }
-}
-
-* .App .home .contact_form .signup .signup_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-* .App .home .contact_form .signup .signup_header .signup_title {
-  font-weight: 200;
-}
-
-* .App .home .contact_form .signup .signup_header .fa-times {
-  font-size: 20px;
-  cursor: pointer;
-  padding: 8px;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_data .name_signup input,
-* .App .home .contact_form .signup .signup_bottom .signup_data .email_signup input,
-* .App .home .contact_form .signup .signup_bottom .signup_data .pass_signup input,
-* .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup input {
-  width: 100%;
-  border: none;
-  font-size: 17px;
-  padding: 8px 0px 2px 0px;
-  border-bottom: 1px solid black;
-  margin-bottom: 5px;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_data .name_signup input:focus,
-* .App .home .contact_form .signup .signup_bottom .signup_data .email_signup input:focus,
-* .App .home .contact_form .signup .signup_bottom .signup_data .pass_signup input:focus,
-* .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup input:focus {
-  outline: none;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_data .name_signup .signup_error,
-* .App .home .contact_form .signup .signup_bottom .signup_data .email_signup .signup_error,
-* .App .home .contact_form .signup .signup_bottom .signup_data .pass_signup .signup_error,
-* .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup .signup_error {
-  font-size: 13px;
-  color: red;
-  margin-bottom: 10px;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup {
-  position: relative;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_data .confirm_signup .far {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-* .App .home .contact_form .signup .signup_bottom button {
-  width: 100%;
-  font-size: 18px;
-  padding: 8px 0px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-* .App .home .contact_form .signup .signup_bottom button:hover {
-  background-color: lightgray;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  color: #946b45;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_links span {
-  cursor: pointer;
-}
-
-* .App .home .contact_form .signup .signup_bottom .signup_links span:hover {
-  text-decoration: underline;
-}
-
-* .App .home .inactive {
-  display: none;
-}
-
 * .App .home .fa-chevron-up {
   position: fixed;
   bottom: 30px;
@@ -446,10 +470,22 @@
   font-size: 30px;
   padding: 15px;
   cursor: pointer;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 * .App .home .fa-chevron-up:hover {
   color: #b49374;
+}
+
+* .App .home .hidden {
+  color: transparent;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+* .App .home .hidden:hover {
+  color: transparent;
 }
 
 * .App .about {
