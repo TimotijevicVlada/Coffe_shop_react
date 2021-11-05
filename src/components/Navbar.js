@@ -26,7 +26,7 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact }) => {
                 <a href="#products">Products</a>
                 <a href="#popular">Popular</a>
                 <a href="#contact">Contact</a>
-                <a href="#rewiev">Review</a>
+                <a href="#review">Review</a>
             </div>
             <div className="menu_right">
                 <i onClick={() => console.log(window.scrollY)} className="fas fa-shopping-cart"></i>

@@ -965,6 +965,128 @@
   background-color: #a07b58;
 }
 
+* .App .review {
+  height: 100vh;
+}
+
+* .App .review .review_title {
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a07b58;
+}
+
+* .App .review .review_title h1 {
+  font-weight: 200;
+}
+
+* .App .review .review_lower {
+  height: 85vh;
+  padding: 0px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  color: #946b45;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper button:hover {
+  background-color: #ebebc7;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper .rec-slider-container .rec-carousel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper .rec-slider-container .rec-carousel-item .review_item {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 300px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px 10px;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper .rec-slider-container .rec-carousel-item .review_item img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper .rec-slider-container .rec-carousel-item .review_item .review_star i {
+  color: gold;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper .rec-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper .rec-pagination .rec-dot {
+  border: 1px solid #946b45;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 2px;
+  width: 12px;
+  height: 12px;
+}
+
+* .App .review .review_lower .rec-carousel-wrapper .rec-pagination .rec-dot_active {
+  width: 14px;
+  height: 14px;
+  background-color: #946b45;
+}
+
 * .App .footer {
   margin: 0px 100px;
 }

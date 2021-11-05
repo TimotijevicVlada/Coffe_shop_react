@@ -7,6 +7,7 @@ import MessageUs from "./components/MessageUs";
 import Footer from "./components/Footer";
 import Popular from "./components/Popular";
 import About from "./components/About";
+import Review from "./components/Review";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <Products />
       <Popular />
       <MessageUs />
+      <Review />
       <Footer />
     </div>
   );
