@@ -13,6 +13,8 @@ function App() {
 
   const [contact, setContact] = useState(false);
   const [switchContact, setSwitchContact] = useState("login");
+  const [cartVisibility, setCartVisibility] = useState(false);
+
 
 
   return (
@@ -22,6 +24,8 @@ function App() {
         contact={contact}
         switchContact={switchContact} 
         setSwitchContact={setSwitchContact}
+        cartVisibility={cartVisibility}
+        setCartVisibility={setCartVisibility}
       />
       <Home />
       <About />

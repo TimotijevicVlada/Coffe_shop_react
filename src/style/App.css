@@ -86,7 +86,7 @@
 }
 
 * .App .navbar .menu_right i:hover {
-  color: black;
+  color: white;
 }
 
 * .App .navbar .menu_right .contact_form {
@@ -398,6 +398,42 @@
 }
 
 * .App .navbar .menu_right .inactive {
+  display: none;
+}
+
+* .App .navbar .menu_right .cart {
+  position: absolute;
+  top: 60px;
+  right: -200px;
+  width: 380px;
+  min-height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 15px;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  -webkit-animation: fadeInCart 0.4s linear;
+          animation: fadeInCart 0.4s linear;
+}
+
+@-webkit-keyframes fadeInCart {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInCart {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+* .App .navbar .menu_right .cartHidden {
   display: none;
 }
 

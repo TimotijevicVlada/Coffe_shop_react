@@ -59,7 +59,7 @@
           margin-right: 15px;
           cursor: pointer;
           &:hover {
-            color: black;
+            color: white;
           }
         }
         .contact_form {
@@ -266,6 +266,28 @@
           }
         }
         .inactive {
+          display: none;
+        }
+        .cart {
+          position: absolute;
+          top: 60px;
+          right: -200px;
+          width: 380px;
+          min-height: 400px;
+          background-color: white;
+          border-radius: 10px;
+          color: black;
+          padding: 15px;
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          animation: fadeInCart 0.4s linear;
+          @keyframes fadeInCart {
+            0% {
+              transform: translateY(3rem);
+              opacity: 0;
+            }
+          }
+        }
+        .cartHidden {
           display: none;
         }
       }
