@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Cart = ({cartVisibility }) => {
+const Cart = ({cartVisibility, cartProducts, deleteCartItem }) => {
     return (
         <div className={cartVisibility ? "cart" : "cartHidden"}>
-            <h3>Cart is empty</h3>
+            {cartProducts.map(item => (
+                <div className="cart_item" key={item.id}>
+                    <img src={`./coffee_img/${item.img}`} alt={item.name} />
+                    <i onClick={() => deleteCartItem(item.id)} className="fas fa-trash"></i>
+                </div>
+            ))}
         </div>
     )
 }

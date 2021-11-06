@@ -83,10 +83,32 @@
   font-size: 20px;
   margin-right: 15px;
   cursor: pointer;
+  position: relative;
 }
 
 * .App .navbar .menu_right i:hover {
   color: white;
+}
+
+* .App .navbar .menu_right i .cartNum {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  color: red;
+  font-size: 14px;
+  background-color: white;
+  width: 14px;
+  height: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
 }
 
 * .App .navbar .menu_right .contact_form {
@@ -431,6 +453,31 @@
             transform: translateY(3rem);
     opacity: 0;
   }
+}
+
+* .App .navbar .menu_right .cart .cart_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .navbar .menu_right .cart .cart_item img {
+  width: 60px;
+}
+
+* .App .navbar .menu_right .cart .cart_item .fas {
+  color: gray;
+  cursor: pointer;
+}
+
+* .App .navbar .menu_right .cart .cart_item .fas:hover {
+  color: black;
 }
 
 * .App .navbar .menu_right .cartHidden {

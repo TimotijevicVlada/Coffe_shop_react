@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './style/App.css';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -15,6 +15,18 @@ function App() {
   const [switchContact, setSwitchContact] = useState("login");
   const [cartVisibility, setCartVisibility] = useState(false);
 
+  const [cartProducts, setCartProducts] = useState([]);
+  const [cartNum, setCartNum] = useState(0);
+
+  useEffect(() => {
+    setCartNum(cartProducts.length)
+  }, [cartProducts])
+
+
+  const deleteCartItem = (id) => {
+    let newArr = cartProducts.filter(item => item.id !== id);
+    setCartProducts(newArr); 
+  } 
 
 
   return (
@@ -26,10 +38,13 @@ function App() {
         setSwitchContact={setSwitchContact}
         cartVisibility={cartVisibility}
         setCartVisibility={setCartVisibility}
+        cartProducts={cartProducts}
+        deleteCartItem={deleteCartItem}
+        cartNum={cartNum}
       />
       <Home />
       <About />
-      <Products />
+      <Products cartProducts={cartProducts} setCartProducts={setCartProducts} setCartNum={setCartNum}/>
       <Popular />
       <MessageUs />
       <Review />

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Contact from "./Contact";
 import Cart from "./Cart";
 
-const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisibility, setCartVisibility }) => {
+const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisibility, setCartVisibility, cartProducts, deleteCartItem, cartNum }) => {
 
   const [navbar, setNavbar] = useState(false);
 
@@ -43,7 +43,7 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
         <i
           onClick={toggleCart}
           className="fas fa-shopping-cart"
-        ></i>
+        >{cartNum < 1 ? "" : <span className="cartNum">{cartNum}</span>}</i>
         <i onClick={toggleContact} className="fas fa-user"></i>
         <Contact
           contact={contact}
@@ -53,6 +53,8 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
         />
         <Cart 
             cartVisibility={cartVisibility}
+            cartProducts={cartProducts}
+            deleteCartItem={deleteCartItem}
         />
       </div>
     </div>
