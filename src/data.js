@@ -17,7 +17,7 @@ export const products = [
             current: 15,
             old: 18
         },
-        stars: 4.9
+        stars: 4
     },
     {
         id: 3,
@@ -77,6 +77,6 @@ export const products = [
             current: 13,
             old: 14
         },
-        stars: 4
+        stars: 4.2
     }
 ]

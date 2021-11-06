@@ -510,7 +510,6 @@
       padding: 0px 100px;
       .popular_title {
         height: 15vh;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -550,6 +549,71 @@
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+                .item {
+                  width: 350px;
+                  height: 520px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: relative;
+                  overflow: hidden;
+                  &:hover .popular_hidden_info {
+                    bottom: 0px;
+                  }
+                  img {
+                    width: 70%;
+                  }
+                  .popular_hidden_info {
+                    position: absolute;
+                    bottom: -150px;
+                    background-color: rgba(255, 255, 255, 0.6);
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 350px;
+                    height: 150px;
+                    transition: all 0.3s ease;
+                    text-align: center;
+                    .popular_name {
+                      font-size: 25px;
+                      font-weight: 200;
+                      color: rgb(148, 107, 69);
+                      span {
+                        background-color: white;
+                        padding: 0px 12px;
+                        border-radius: 5px;
+                      }
+                    }
+                    .popular_price {
+                      font-size: 20px;
+                      margin: 5px 0px;
+                      .popular_price_span {
+                        background-color: white;
+                        border-radius: 5px;
+                        span {
+                          margin: 0px 15px;
+                        }
+                        .popular_old {
+                          text-decoration: line-through;
+                          font-size: 18px;
+                        }
+                      }
+                    }
+                    .popular_stars {
+                      color: gold;
+                      font-size: 20px;
+                      i {
+                        background-color: white;
+                        padding: 3px 5px;
+                        &:first-child {
+                          border-radius: 5px 0px 0px 5px;
+                        }
+                        &:last-child {
+                          border-radius: 0px 5px 5px 0px;
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -718,7 +782,7 @@
               align-items: center;
               cursor: pointer;
               .review_item {
-                box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
                 padding: 15px;
                 width: 300px;
                 height: 400px;

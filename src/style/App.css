@@ -826,6 +826,92 @@
   cursor: pointer;
 }
 
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item {
+  width: 350px;
+  height: 520px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item:hover .popular_hidden_info {
+  bottom: 0px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item img {
+  width: 70%;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info {
+  position: absolute;
+  bottom: -150px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  width: 350px;
+  height: 150px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_name {
+  font-size: 25px;
+  font-weight: 200;
+  color: #946b45;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_name span {
+  background-color: white;
+  padding: 0px 12px;
+  border-radius: 5px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_price {
+  font-size: 20px;
+  margin: 5px 0px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_price .popular_price_span {
+  background-color: white;
+  border-radius: 5px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_price .popular_price_span span {
+  margin: 0px 15px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_price .popular_price_span .popular_old {
+  text-decoration: line-through;
+  font-size: 18px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_stars {
+  color: gold;
+  font-size: 20px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_stars i {
+  background-color: white;
+  padding: 3px 5px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_stars i:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_stars i:last-child {
+  border-radius: 0px 5px 5px 0px;
+}
+
 * .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
