@@ -2,41 +2,15 @@ import React from "react";
 import { products } from "../data";
 
 const Products = ({ cartProducts, setCartProducts, setCartNum }) => {
-  const addToCart = (id) => {
-    if (cartProducts.length < 1) {
-      const newItem = products.filter((item) => item.id === id);
-      const newCartProducts = [
-        {
-          id: newItem[0].id,
-          name: newItem[0].name,
-          img: newItem[0].img,
-          price: newItem[0].price,
-          stars: newItem[0].stars,
-        },
-      ];
-      setCartProducts(newCartProducts);
-      setCartNum(cartProducts.length);
+
+  
+  const addToCart = (product) => {
+    const exist = cartProducts.find((item) => item.id === product.id);
+    if (exist) {
+      alert("This product is already in the cart!");
     } else {
-      for (let i in cartProducts) {
-        if (cartProducts[i].id === id) {
-          alert("This product is already in the cart!");
-          return;
-        } else {
-          const newItem = products.filter((item) => item.id === id);
-          const newCartProducts = [
-            ...cartProducts,
-            {
-              id: newItem[0].id,
-              name: newItem[0].name,
-              img: newItem[0].img,
-              price: newItem[0].price,
-              stars: newItem[0].stars,
-            },
-          ];
-          setCartProducts(newCartProducts);
-          setCartNum(cartProducts.length);
-        }
-      }
+      setCartProducts([...cartProducts, { ...product }]);
+      setCartNum(cartProducts.length);
     }
   };
 
@@ -67,7 +41,7 @@ const Products = ({ cartProducts, setCartProducts, setCartNum }) => {
             </div>
             <div className="events">
               <i
-                onClick={() => addToCart(item.id)}
+                onClick={() => addToCart(item)}
                 className="fas fa-shopping-cart"
               ></i>
               <i className="fas fa-heart"></i>
