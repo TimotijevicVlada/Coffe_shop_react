@@ -1,7 +1,7 @@
 import React from "react";
 import { products } from "../data";
 
-const Products = ({ cartProducts, setCartProducts, setCartNum }) => {
+const Products = ({ cartProducts, setCartProducts}) => {
 
   
   const addToCart = (product) => {
@@ -10,7 +10,6 @@ const Products = ({ cartProducts, setCartProducts, setCartNum }) => {
       alert("This product is already in the cart!");
     } else {
       setCartProducts([...cartProducts, { ...product }]);
-      setCartNum(cartProducts.length);
     }
   };
 

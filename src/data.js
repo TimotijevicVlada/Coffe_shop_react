@@ -7,6 +7,7 @@ export const products = [
             current: 14,
             old: 16
         },
+        quantity: 1,
         stars: 5
     },
     {
@@ -17,6 +18,7 @@ export const products = [
             current: 15,
             old: 18
         },
+        quantity: 1,
         stars: 4
     },
     {
@@ -27,6 +29,7 @@ export const products = [
             current: 12,
             old: 15
         },
+        quantity: 1,
         stars: 4
     },
     {
@@ -37,6 +40,7 @@ export const products = [
             current: 10,
             old: 12
         },
+        quantity: 1,
         stars: 4
     },
     {
@@ -47,6 +51,7 @@ export const products = [
             current: 17,
             old: 20
         },
+        quantity: 1,
         stars: 4.5
     },
     {
@@ -57,6 +62,7 @@ export const products = [
             current: 16,
             old: 17
         },
+        quantity: 1,
         stars: 4.8
     },
     {
@@ -67,6 +73,7 @@ export const products = [
             current: 14,
             old: 17
         },
+        quantity: 1,
         stars: 4.5
     },
     {
@@ -77,6 +84,7 @@ export const products = [
             current: 13,
             old: 14
         },
+        quantity: 1,
         stars: 4.2
     }
 ]

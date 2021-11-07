@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Contact from "./Contact";
 import Cart from "./Cart";
 
-const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisibility, setCartVisibility, cartProducts, deleteCartItem, cartNum }) => {
+const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisibility, setCartVisibility, cartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity }) => {
 
   const [navbar, setNavbar] = useState(false);
 
@@ -43,7 +43,7 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
         <i
           onClick={toggleCart}
           className="fas fa-shopping-cart"
-        >{cartNum < 1 ? "" : <span className="cartNum">{cartNum}</span>}</i>
+        >{totalProducts < 1 ? "" : <span className="cartNum">{totalProducts}</span>}</i>
         <i onClick={toggleContact} className="fas fa-user"></i>
         <Contact
           contact={contact}
@@ -55,6 +55,10 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
             cartVisibility={cartVisibility}
             cartProducts={cartProducts}
             deleteCartItem={deleteCartItem}
+            totalProducts={totalProducts}
+            totalPrice={totalPrice}
+            increaseQuantity={increaseQuantity}
+            decreaseQuantity={decreaseQuantity}
         />
       </div>
     </div>
