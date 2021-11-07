@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Carousel from "react-elastic-carousel";
 import {products} from "../data";
 
-const Popular = () => {
+const Popular = ({addToCart}) => {
 
   const [popular] = useState(products.filter(item => item.stars > 4));
 
@@ -23,7 +23,7 @@ const Popular = () => {
       <div className="popular_item_wrapper">
         <Carousel breakPoints={breakPoints}>
           {popular.map(item => (
-              <div className="item" key={item.id}>
+              <div onClick={() => addToCart(item)} className="item" key={item.id}>
                   <img src={`./coffee_img/${item.img}`} alt={item.name} />
                   <div className="popular_hidden_info">
                     <div className="popular_name"><span>{item.name}</span></div>

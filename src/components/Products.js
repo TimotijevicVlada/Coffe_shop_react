@@ -1,17 +1,8 @@
 import React from "react";
 import { products } from "../data";
 
-const Products = ({ cartProducts, setCartProducts}) => {
+const Products = ({ addToCart }) => {
 
-  
-  const addToCart = (product) => {
-    const exist = cartProducts.find((item) => item.id === product.id);
-    if (exist) {
-      alert("This product is already in the cart!");
-    } else {
-      setCartProducts([...cartProducts, { ...product }]);
-    }
-  };
 
   return (
     <div className="products" id="products">

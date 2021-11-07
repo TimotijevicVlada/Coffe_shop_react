@@ -18,6 +18,16 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const [cartProducts, setCartProducts] = useState([]);
+
+  //Add item to the cart
+  const addToCart = (product) => {
+    const exist = cartProducts.find((item) => item.id === product.id);
+    if (exist) {
+      alert("This product is already in the cart!");
+    } else {
+      setCartProducts([...cartProducts, { ...product }]);
+    }
+  };
   
   //Funtion that delete item from cart
   const deleteCartItem = (id) => {
@@ -97,8 +107,8 @@ function App() {
       />
       <Home />
       <About />
-      <Products cartProducts={cartProducts} setCartProducts={setCartProducts}/>
-      <Popular />
+      <Products addToCart={addToCart}/>
+      <Popular addToCart={addToCart}/>
       <MessageUs />
       <Review />
       <Footer />

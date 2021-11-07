@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
   const [eyeLogin, setEyeLogin] = useState(true);
   const [eyeSignup, setEyeSignup] = useState(true);
+
   const [loginValue, setLoginValue] = useState({ email: "", password: ""});
   const [loginError, setLoginError] = useState({ email: "", password: ""});
 
@@ -11,16 +12,16 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
 
   const validateLogin = (e) => {
     e.preventDefault();
-
     let errors = {
       email: "",
       password: ""
     };
     //Validate email
+    let emailTest = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(loginValue.email);
     if (!loginValue.email) {
       console.log("Nema podataka za email");
       errors = {...errors, email: "Email required"};
-    } else if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(loginValue.email)) {
+    } else if (!emailTest) {
       console.log("Pogresni podaci emaila");
       errors = {...errors, email: "Email address is invalid!"};
     } else {
@@ -29,20 +30,15 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
     }
 
     //Validate pass
+    let passTest = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(loginValue.password);
     if (!loginValue.password) {
       errors = {...errors, password: "Password is required"};
-    } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(loginValue.password)) {
+    } else if (!passTest) {
       errors = {...errors, password: "Password require uppercase, lowercase and number!"};
     } else {
       errors = {...errors, password: ""};
     }
-
     setLoginError(errors);
-
-    if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(loginValue.email) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(loginValue.password)) {
-        alert("Succesfull LOGIN!");
-    }
-
   };
 
   const validateSignup = (e) => {
@@ -54,42 +50,43 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
       confirmPassword: ""
     };
     //Validate name
+    let nameTest = /^[A-Z][a-z]{2,}/.test(signupValue.name.trim());
     if (!signupValue.name.trim()) {
       errors = {...errors, name: "Name required"};
-    } else if (!/^[A-Z][a-z]{2,}/.test(signupValue.name.trim())) {
+    } else if (!nameTest) {
       errors = {...errors, name: "Name is invalid!"};
     } else {
       errors = {...errors, name: ""};
     }
     //Validate email
+    let emailTest = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(signupValue.email);
     if (!signupValue.email) {
       errors = {...errors, email: "Email required"};
-    } else if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(signupValue.email)) {
+    } else if (!emailTest) {
       errors = {...errors, email: "Email address is invalid!"};
     } else {
       errors = {...errors, email: ""};
     }
     //Validate pass
+    let passTest = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.password);
     if (!signupValue.password) {
       errors = {...errors, password: "Password is required"};
-    } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.password)) {
+    } else if (!passTest) {
       errors = {...errors, password: "Password require uppercase, lowercase and number!"};
     } else {
       errors = {...errors, password: ""};
     }
     //Validate confirm password
+    let cunfPassTest = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.confirmPassword);
     if (!signupValue.confirmPassword) {
       errors = {...errors, confirmPassword: "Confirm password is required"};
-    } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.confirmPassword)) {
+    } else if (!cunfPassTest) {
       errors = {...errors, confirmPassword: "Password require uppercase, lowercase and number!"};
     } else {
       errors = {...errors, confirmPassword: ""};
     }
     setSignupError(errors);
 
-    if(/^[A-Z][a-z]{2,}/.test(signupValue.name.trim()) && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(signupValue.email) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.password) && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(signupValue.confirmPassword)) {
-      alert("Succesfull registration!");
-    }
   }
 
   return (
