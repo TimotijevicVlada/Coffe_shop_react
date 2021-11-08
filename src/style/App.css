@@ -90,12 +90,13 @@
   color: white;
 }
 
-* .App .navbar .menu_right i .cartNum {
+* .App .navbar .menu_right i .cartNum, * .App .navbar .menu_right i .favNum {
   position: absolute;
   top: -7px;
   right: -9px;
   color: red;
   font-size: 14px;
+  font-weight: bold;
   background-color: white;
   width: 14px;
   height: 14px;
@@ -612,6 +613,130 @@
   height: 5.5vh;
   background-color: #ebebc7;
   color: #946b45;
+}
+
+* .App .favorite {
+  position: fixed;
+  z-index: 3;
+  padding: 10px;
+  top: 60px;
+  right: 50px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  width: 380px;
+  height: 400px;
+  -webkit-animation: fadeInFav 0.4s linear;
+          animation: fadeInFav 0.4s linear;
+  overflow: hidden;
+}
+
+@-webkit-keyframes fadeInFav {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInFav {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+* .App .favorite .favorite_empty {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 18px;
+}
+
+* .App .favorite .fav_inner {
+  height: 100%;
+  padding: 5px;
+  overflow-y: scroll;
+}
+
+* .App .favorite .fav_inner::-webkit-scrollbar {
+  width: 5px;
+}
+
+* .App .favorite .fav_inner .fav_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_img {
+  width: 25%;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_img img {
+  width: 50px;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_info span {
+  margin: 5px 0px;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_events i {
+  cursor: pointer;
+  font-size: 18px;
+  color: gray;
+  margin: 5px 0px;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_events i:hover {
+  color: black;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_trash {
+  margin-right: 10px;
+  width: 10%;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_trash i {
+  cursor: pointer;
+  font-size: 18px;
+  color: gray;
+}
+
+* .App .favorite .fav_inner .fav_item .fav_trash i:hover {
+  color: black;
+}
+
+* .App .favHidden {
+  display: none;
 }
 
 * .App .home {

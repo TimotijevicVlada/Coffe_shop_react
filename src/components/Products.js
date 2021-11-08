@@ -1,7 +1,7 @@
 import React from "react";
 import { products } from "../data";
 
-const Products = ({ addToCart }) => {
+const Products = ({ addToCart, addToFav }) => {
 
 
   return (
@@ -34,7 +34,7 @@ const Products = ({ addToCart }) => {
                 onClick={() => addToCart(item)}
                 className="fas fa-shopping-cart"
               ></i>
-              <i className="fas fa-heart"></i>
+              <i onClick={() => addToFav(item)} className="fas fa-heart"></i>
               <i className="fas fa-eye"></i>
             </div>
           </div>

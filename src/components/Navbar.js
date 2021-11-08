@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Contact from "./Contact";
 import Cart from "./Cart";
 
-const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisibility, setCartVisibility, cartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity }) => {
+const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisibility, setCartVisibility, cartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity, favVisible, setFavVisible, favProducts }) => {
 
   const [navbar, setNavbar] = useState(false);
 
@@ -18,11 +18,19 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
   const toggleCart = () => {
     setCartVisibility(!cartVisibility);
     setContact(false);
+    setFavVisible(false);
   }
 
   const toggleContact = () => {
     setContact(!contact);
     setCartVisibility(false);
+    setFavVisible(false);
+  }
+  
+  const toggleFav = () => {
+    setFavVisible(!favVisible);
+    setCartVisibility(false);
+    setContact(false);
   }
 
   return (
@@ -44,6 +52,7 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
           onClick={toggleCart}
           className="fas fa-shopping-cart"
         >{totalProducts < 1 ? "" : <span className="cartNum">{totalProducts}</span>}</i>
+        <i onClick={toggleFav} className="fas fa-heart">{favProducts.length < 1 ? "" : <span className="favNum">{favProducts.length}</span>}</i>
         <i onClick={toggleContact} className="fas fa-user"></i>
         <Contact
           contact={contact}

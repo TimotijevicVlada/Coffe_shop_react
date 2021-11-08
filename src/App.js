@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Popular from "./components/Popular";
 import About from "./components/About";
 import Review from "./components/Review";
+import Favorite from "./components/Favorite";
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const [cartProducts, setCartProducts] = useState([]);
+
+  const [favVisible, setFavVisible] = useState(false);
+  const [favProducts, setFavProducts] = useState([]);
 
   //Add item to the cart
   const addToCart = (product) => {
@@ -88,6 +92,23 @@ function App() {
     setCartProducts(decrease);
   };
 
+  //Add item to the Favorite
+  const addToFav = (product) => {
+    const exist = favProducts.find((item) => item.id === product.id);
+    if (exist) {
+      alert("This product is already in the favorite!");
+    } else {
+      setFavProducts([...favProducts, { ...product }]);
+    }
+  };
+
+  //Funtion that delete item from favorite
+  const deleteFavItem = (id) => {
+    let newArr = favProducts.filter(item => item.id !== id);
+    setFavProducts(newArr); 
+  } 
+
+  console.log(favProducts)
 
   return (
     <div className="App">
@@ -104,10 +125,14 @@ function App() {
         totalPrice={totalPrice}
         increaseQuantity={increaseQuantity}
         decreaseQuantity={decreaseQuantity}
+        favVisible={favVisible}
+        setFavVisible={setFavVisible}
+        favProducts={favProducts}
       />
+      <Favorite favVisible={favVisible} favProducts={favProducts} deleteFavItem={deleteFavItem} addToCart={addToCart}/>
       <Home />
       <About />
-      <Products addToCart={addToCart}/>
+      <Products addToCart={addToCart} addToFav={addToFav}/>
       <Popular addToCart={addToCart}/>
       <MessageUs />
       <Review />
