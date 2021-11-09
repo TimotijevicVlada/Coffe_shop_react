@@ -9,19 +9,23 @@ import Popular from "./components/Popular";
 import About from "./components/About";
 import Review from "./components/Review";
 import Favorite from "./components/Favorite";
+import Cart from "./components/Cart";
+import Contact from "./components/Contact";
+import Details from "./components/Details";
 
 function App() {
 
+  //States
   const [contact, setContact] = useState(false);
   const [switchContact, setSwitchContact] = useState("login");
   const [cartVisibility, setCartVisibility] = useState(false);
   const [totalProducts, setTotalProducts] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-
   const [cartProducts, setCartProducts] = useState([]);
-
   const [favVisible, setFavVisible] = useState(false);
   const [favProducts, setFavProducts] = useState([]);
+  const [detailsVisible, setDetailsVisible] = useState(false);
+  const [detailProduct, setDetailProduct] = useState({});
 
   //Add item to the cart
   const addToCart = (product) => {
@@ -108,31 +112,65 @@ function App() {
     setFavProducts(newArr); 
   } 
 
-  console.log(favProducts)
+  //ViewDetails function
+  const viewDetails = (item) => {
+    setDetailProduct(item);
+    setDetailsVisible(true);
+    setFavVisible(false);
+    setCartVisibility(false);
+    setContact(false);
+  }
+  
 
   return (
     <div className="App">
       <Navbar 
-        setContact={setContact} 
-        contact={contact}
-        switchContact={switchContact} 
-        setSwitchContact={setSwitchContact}
-        cartVisibility={cartVisibility}
-        setCartVisibility={setCartVisibility}
-        cartProducts={cartProducts}
-        deleteCartItem={deleteCartItem}
-        totalProducts={totalProducts}
-        totalPrice={totalPrice}
-        increaseQuantity={increaseQuantity}
-        decreaseQuantity={decreaseQuantity}
-        favVisible={favVisible}
-        setFavVisible={setFavVisible}
-        favProducts={favProducts}
-      />
-      <Favorite favVisible={favVisible} favProducts={favProducts} deleteFavItem={deleteFavItem} addToCart={addToCart}/>
+          setContact={setContact} 
+          contact={contact}
+          cartVisibility={cartVisibility}
+          setCartVisibility={setCartVisibility}
+          totalProducts={totalProducts}
+          favVisible={favVisible}
+          setFavVisible={setFavVisible}
+          favProducts={favProducts}
+          setDetailsVisible={setDetailsVisible}
+        />
+      <Favorite 
+          favVisible={favVisible} 
+          favProducts={favProducts} 
+          deleteFavItem={deleteFavItem} 
+          addToCart={addToCart}
+        />
+      <Contact
+          contact={contact}
+          setContact={setContact}
+          switchContact={switchContact}
+          setSwitchContact={setSwitchContact}
+        />
+        <Cart 
+          cartVisibility={cartVisibility}
+          cartProducts={cartProducts}
+          setCartProducts={setCartProducts}
+          deleteCartItem={deleteCartItem}
+          totalProducts={totalProducts}
+          totalPrice={totalPrice}
+          increaseQuantity={increaseQuantity}
+          decreaseQuantity={decreaseQuantity}
+        />
+      <Details 
+          detailProduct={detailProduct}
+          detailsVisible={detailsVisible}
+          setDetailsVisible={setDetailsVisible}
+          addToFav={addToFav}
+          addToCart={addToCart}
+        />
       <Home />
       <About />
-      <Products addToCart={addToCart} addToFav={addToFav}/>
+      <Products 
+          addToCart={addToCart}   
+          addToFav={addToFav}
+          viewDetails={viewDetails}
+        />
       <Popular addToCart={addToCart}/>
       <MessageUs />
       <Review />

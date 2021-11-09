@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Contact from "./Contact";
-import Cart from "./Cart";
 
-const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisibility, setCartVisibility, cartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity, favVisible, setFavVisible, favProducts }) => {
+
+const Navbar = ({ contact, setContact, cartVisibility, setCartVisibility, totalProducts, favVisible, setFavVisible, favProducts, setDetailsVisible }) => {
 
   const [navbar, setNavbar] = useState(false);
 
@@ -19,18 +18,21 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
     setCartVisibility(!cartVisibility);
     setContact(false);
     setFavVisible(false);
+    setDetailsVisible(false);
   }
 
   const toggleContact = () => {
     setContact(!contact);
     setCartVisibility(false);
     setFavVisible(false);
+    setDetailsVisible(false);
   }
   
   const toggleFav = () => {
     setFavVisible(!favVisible);
     setCartVisibility(false);
     setContact(false);
+    setDetailsVisible(false);
   }
 
   return (
@@ -54,21 +56,6 @@ const Navbar = ({ contact, setContact, switchContact, setSwitchContact, cartVisi
         >{totalProducts < 1 ? "" : <span className="cartNum">{totalProducts}</span>}</i>
         <i onClick={toggleFav} className="fas fa-heart">{favProducts.length < 1 ? "" : <span className="favNum">{favProducts.length}</span>}</i>
         <i onClick={toggleContact} className="fas fa-user"></i>
-        <Contact
-          contact={contact}
-          setContact={setContact}
-          switchContact={switchContact}
-          setSwitchContact={setSwitchContact}
-        />
-        <Cart 
-            cartVisibility={cartVisibility}
-            cartProducts={cartProducts}
-            deleteCartItem={deleteCartItem}
-            totalProducts={totalProducts}
-            totalPrice={totalPrice}
-            increaseQuantity={increaseQuantity}
-            decreaseQuantity={decreaseQuantity}
-        />
       </div>
     </div>
   );

@@ -75,10 +75,6 @@
   text-decoration: underline;
 }
 
-* .App .navbar .menu_right {
-  position: relative;
-}
-
 * .App .navbar .menu_right i {
   font-size: 20px;
   margin-right: 15px;
@@ -112,324 +108,21 @@
   border-radius: 50%;
 }
 
-* .App .navbar .menu_right .contact_form {
-  position: absolute;
+* .App .scroll {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 5.5vh;
+  background-color: #ebebc7;
+  color: #946b45;
+}
+
+* .App .cart {
+  position: fixed;
   top: 60px;
-  right: -200px;
+  right: 50px;
   width: 380px;
   height: 400px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: white;
-  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  -webkit-animation: fadeIn 0.4s linear;
-          animation: fadeIn 0.4s linear;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    -webkit-transform: translateY(3rem);
-            transform: translateY(3rem);
-    opacity: 0;
-  }
-}
-
-* .App .navbar .menu_right .contact_form .login {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-animation: fadeLogin 0.6s linear;
-          animation: fadeLogin 0.6s linear;
-}
-
-@-webkit-keyframes fadeLogin {
-  0% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeLogin {
-  0% {
-    opacity: 0;
-  }
-}
-
-* .App .navbar .menu_right .contact_form .login .login_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_header .login_title {
-  color: #946b45;
-  font-weight: 200;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_header .fa-times {
-  font-size: 20px;
-  cursor: pointer;
-  padding: 8px;
-  color: #946b45;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_email input,
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass input {
-  width: 100%;
-  border: none;
-  font-size: 17px;
-  padding: 8px 0px 2px 0px;
-  border-bottom: 1px solid black;
-  margin-bottom: 5px;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_email input:focus,
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass input:focus {
-  outline: none;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_email .login_error,
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass .login_error {
-  font-size: 13px;
-  color: red;
-  margin-bottom: 10px;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass {
-  position: relative;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_data .login_pass .far {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  color: black;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_checkbox {
-  margin-bottom: 15px;
-  color: #946b45;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_checkbox input {
-  margin-right: 10px;
-  width: 17px;
-  height: 17px;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom button {
-  width: 100%;
-  font-size: 18px;
-  padding: 8px 0px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom button:hover {
-  background-color: lightgray;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #946b45;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_links span {
-  cursor: pointer;
-}
-
-* .App .navbar .menu_right .contact_form .login .login_bottom .login_links span:hover {
-  text-decoration: underline;
-}
-
-* .App .navbar .menu_right .contact_form .signup {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-animation: fadeSignup 0.6s linear;
-          animation: fadeSignup 0.6s linear;
-}
-
-@-webkit-keyframes fadeSignup {
-  0% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeSignup {
-  0% {
-    opacity: 0;
-  }
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_header .signup_title {
-  font-weight: 200;
-  color: #946b45;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_header .fa-times {
-  font-size: 20px;
-  cursor: pointer;
-  padding: 8px;
-  color: #946b45;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .name_signup input,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .email_signup input,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .pass_signup input,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup input {
-  width: 100%;
-  border: none;
-  font-size: 17px;
-  padding: 8px 0px 2px 0px;
-  border-bottom: 1px solid black;
-  margin-bottom: 5px;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .name_signup input:focus,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .email_signup input:focus,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .pass_signup input:focus,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup input:focus {
-  outline: none;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .name_signup .signup_error,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .email_signup .signup_error,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .pass_signup .signup_error,
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup .signup_error {
-  font-size: 13px;
-  color: red;
-  margin-bottom: 10px;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup {
-  position: relative;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_data .confirm_signup .far {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 18px;
-  cursor: pointer;
-  color: black;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom button {
-  width: 100%;
-  font-size: 18px;
-  padding: 8px 0px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom button:hover {
-  background-color: lightgray;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  color: #946b45;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_links span {
-  cursor: pointer;
-}
-
-* .App .navbar .menu_right .contact_form .signup .signup_bottom .signup_links span:hover {
-  text-decoration: underline;
-}
-
-* .App .navbar .menu_right .inactive {
-  display: none;
-}
-
-* .App .navbar .menu_right .cart {
-  position: absolute;
-  top: 60px;
-  right: -200px;
-  width: 380px;
-  height: 400px;
+  z-index: 3;
   max-height: 400px;
   background-color: white;
   border-radius: 10px;
@@ -457,13 +150,13 @@
   }
 }
 
-* .App .navbar .menu_right .cart .empty_cart {
+* .App .cart .empty_cart {
   text-align: center;
   font-size: 18px;
   padding: 20px 0px;
 }
 
-* .App .navbar .menu_right .cart .cart_products {
+* .App .cart .cart_products {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,7 +169,7 @@
           justify-content: space-between;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper {
+* .App .cart .cart_products .cart_upper {
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,11 +181,11 @@
   overflow-y: scroll;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper::-webkit-scrollbar {
+* .App .cart .cart_products .cart_upper::-webkit-scrollbar {
   width: 5px;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item {
+* .App .cart .cart_products .cart_upper .cart_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,17 +195,17 @@
   height: 100px;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_info {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_info .cart_item_img img {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_info .cart_item_img img {
   width: 50px;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_info .cart_item_name_price {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_info .cart_item_name_price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -527,7 +220,7 @@
   margin-left: 20px;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_events {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_events {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,7 +229,7 @@
           align-items: center;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_events .cart_item_qty {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_events .cart_item_qty {
   margin-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -545,74 +238,224 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_events .cart_item_qty div {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_events .cart_item_qty div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 30px;
-  display: flex;
-  justify-content: center;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_events .cart_item_qty i {
-  margin-left: 14px;
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_events .cart_item_qty i {
   font-size: 12px;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_events .fas {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_events .fas {
   color: gray;
   cursor: pointer;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_upper .cart_item .cart_item_events .fas:hover {
+* .App .cart .cart_products .cart_upper .cart_item .cart_item_events .fas:hover {
   color: black;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_lower {
+* .App .cart .cart_products .cart_lower {
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 
-* .App .navbar .menu_right .cart .cart_products .cart_lower h4 {
+* .App .cart .cart_products .cart_lower .delete_all_items button {
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  color: gray;
+  cursor: pointer;
+}
+
+* .App .cart .cart_products .cart_lower .delete_all_items button:hover {
+  color: black;
+}
+
+* .App .cart .cart_products .cart_lower h4 {
   font-weight: 200;
 }
 
-* .App .navbar .menu_right .cartHidden {
+* .App .cartHidden {
   display: none;
 }
 
-* .App .scroll {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  height: 5.5vh;
-  background-color: #ebebc7;
-  color: #946b45;
+* .App .details {
+  position: fixed;
+  top: 60px;
+  right: 50px;
+  width: 550px;
+  height: 450px;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 3;
+  padding: 15px;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  -webkit-animation: fadeInDetails 0.4s linear;
+          animation: fadeInDetails 0.4s linear;
+}
+
+@-webkit-keyframes fadeInDetails {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInDetails {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+* .App .details .details_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+* .App .details .details_header h4 {
+  margin-right: 180px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+* .App .details .details_header .fas {
+  font-size: 18px;
+  padding: 8px;
+  color: gray;
+  cursor: pointer;
+}
+
+* .App .details .details_item {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* .App .details .details_item .details_img {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* .App .details .details_item .details_img img {
+  width: 180px;
+}
+
+* .App .details .details_item .details_info {
+  width: 55%;
+}
+
+* .App .details .details_item .details_info .details_name {
+  text-align: center;
+}
+
+* .App .details .details_item .details_info .details_name h3 {
+  font-weight: 200;
+}
+
+* .App .details .details_item .details_info .details_desc {
+  padding: 10px 0px;
+}
+
+* .App .details .details_item .details_info .details_desc p {
+  font-size: 15px;
+  text-indent: 20px;
+}
+
+* .App .details .details_item .details_info .details_stars {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+* .App .details .details_item .details_info .details_stars .fas {
+  color: gold;
+  font-size: 20px;
+}
+
+* .App .details .details_item .details_info .details_events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0px;
+}
+
+* .App .details .details_item .details_info .details_events .fas {
+  font-size: 35px;
+  color: lightgray;
+  cursor: pointer;
+  margin: 0px 15px;
+}
+
+* .App .details .details_item .details_info .details_events .fas:hover {
+  color: gray;
+}
+
+* .App .details .details_item .details_info .details_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 10px 0px;
+}
+
+* .App .details .details_item .details_info .details_price span {
+  font-size: 22px;
+  font-weight: 100;
+  margin: 0px 5px;
+}
+
+* .App .details .details_item .details_info .details_price span .details_currency {
+  color: green;
+}
+
+* .App .details .details_item .details_info .details_price .details_price_old {
+  text-decoration: line-through;
+}
+
+* .App .detailsHidden {
+  display: none;
 }
 
 * .App .favorite {
@@ -626,6 +469,8 @@
   border-radius: 10px;
   width: 380px;
   height: 400px;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   -webkit-animation: fadeInFav 0.4s linear;
           animation: fadeInFav 0.4s linear;
   overflow: hidden;
@@ -736,6 +581,319 @@
 }
 
 * .App .favHidden {
+  display: none;
+}
+
+* .App .contact_form {
+  position: fixed;
+  top: 60px;
+  right: 50px;
+  width: 380px;
+  height: 400px;
+  z-index: 3;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  -webkit-animation: fadeIn 0.4s linear;
+          animation: fadeIn 0.4s linear;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+* .App .contact_form .login {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: fadeLogin 0.6s linear;
+          animation: fadeLogin 0.6s linear;
+}
+
+@-webkit-keyframes fadeLogin {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeLogin {
+  0% {
+    opacity: 0;
+  }
+}
+
+* .App .contact_form .login .login_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .contact_form .login .login_header .login_title {
+  color: #946b45;
+  font-weight: 200;
+}
+
+* .App .contact_form .login .login_header .fa-times {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  color: #946b45;
+}
+
+* .App .contact_form .login .login_bottom .login_data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* .App .contact_form .login .login_bottom .login_data .login_email input,
+* .App .contact_form .login .login_bottom .login_data .login_pass input {
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  padding: 8px 0px 2px 0px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+* .App .contact_form .login .login_bottom .login_data .login_email input:focus,
+* .App .contact_form .login .login_bottom .login_data .login_pass input:focus {
+  outline: none;
+}
+
+* .App .contact_form .login .login_bottom .login_data .login_email .login_error,
+* .App .contact_form .login .login_bottom .login_data .login_pass .login_error {
+  font-size: 13px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+* .App .contact_form .login .login_bottom .login_data .login_pass {
+  position: relative;
+}
+
+* .App .contact_form .login .login_bottom .login_data .login_pass .far {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+}
+
+* .App .contact_form .login .login_bottom .login_checkbox {
+  margin-bottom: 15px;
+  color: #946b45;
+}
+
+* .App .contact_form .login .login_bottom .login_checkbox input {
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+}
+
+* .App .contact_form .login .login_bottom button {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+* .App .contact_form .login .login_bottom button:hover {
+  background-color: lightgray;
+}
+
+* .App .contact_form .login .login_bottom .login_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #946b45;
+}
+
+* .App .contact_form .login .login_bottom .login_links span {
+  cursor: pointer;
+}
+
+* .App .contact_form .login .login_bottom .login_links span:hover {
+  text-decoration: underline;
+}
+
+* .App .contact_form .signup {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: fadeSignup 0.6s linear;
+          animation: fadeSignup 0.6s linear;
+}
+
+@-webkit-keyframes fadeSignup {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeSignup {
+  0% {
+    opacity: 0;
+  }
+}
+
+* .App .contact_form .signup .signup_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .App .contact_form .signup .signup_header .signup_title {
+  font-weight: 200;
+  color: #946b45;
+}
+
+* .App .contact_form .signup .signup_header .fa-times {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  color: #946b45;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_data .name_signup input,
+* .App .contact_form .signup .signup_bottom .signup_data .email_signup input,
+* .App .contact_form .signup .signup_bottom .signup_data .pass_signup input,
+* .App .contact_form .signup .signup_bottom .signup_data .confirm_signup input {
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  padding: 8px 0px 2px 0px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_data .name_signup input:focus,
+* .App .contact_form .signup .signup_bottom .signup_data .email_signup input:focus,
+* .App .contact_form .signup .signup_bottom .signup_data .pass_signup input:focus,
+* .App .contact_form .signup .signup_bottom .signup_data .confirm_signup input:focus {
+  outline: none;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_data .name_signup .signup_error,
+* .App .contact_form .signup .signup_bottom .signup_data .email_signup .signup_error,
+* .App .contact_form .signup .signup_bottom .signup_data .pass_signup .signup_error,
+* .App .contact_form .signup .signup_bottom .signup_data .confirm_signup .signup_error {
+  font-size: 13px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_data .confirm_signup {
+  position: relative;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_data .confirm_signup .far {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+}
+
+* .App .contact_form .signup .signup_bottom button {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+* .App .contact_form .signup .signup_bottom button:hover {
+  background-color: lightgray;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #946b45;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_links span {
+  cursor: pointer;
+}
+
+* .App .contact_form .signup .signup_bottom .signup_links span:hover {
+  text-decoration: underline;
+}
+
+* .App .inactive {
   display: none;
 }
 

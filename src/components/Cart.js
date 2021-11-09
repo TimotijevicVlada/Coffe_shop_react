@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({ cartVisibility, cartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity }) => {
+const Cart = ({ cartVisibility, cartProducts, setCartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity }) => {
   return (
     <div className={cartVisibility ? "cart" : "cartHidden"}>
       {cartProducts.length === 0 ? (
@@ -39,8 +39,14 @@ const Cart = ({ cartVisibility, cartProducts, deleteCartItem, totalProducts, tot
             ))}
           </div>
           <div className="cart_lower">
-            <h4>Total poducts: {totalProducts}</h4>
-            <h4>Total price: ${totalPrice.toFixed(2)}</h4>
+            <div className="delete_all_items">
+              <button onClick={() => setCartProducts([])}>Delete all</button>
+            </div>
+            <div className="cart_sum">
+              <h4>Total poducts: {totalProducts}</h4>
+              <h4>Total price: ${totalPrice.toFixed(2)}</h4>
+            </div>
+            
           </div>
         </div>
       )}

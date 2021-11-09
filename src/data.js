@@ -8,7 +8,8 @@ export const products = [
             old: 16
         },
         quantity: 1,
-        stars: 5
+        stars: 5,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ export const products = [
             old: 18
         },
         quantity: 1,
-        stars: 4
+        stars: 4,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     },
     {
         id: 3,
@@ -30,7 +32,8 @@ export const products = [
             old: 15
         },
         quantity: 1,
-        stars: 4
+        stars: 4,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     },
     {
         id: 4,
@@ -41,7 +44,8 @@ export const products = [
             old: 12
         },
         quantity: 1,
-        stars: 4
+        stars: 4,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     },
     {
         id: 5,
@@ -52,7 +56,8 @@ export const products = [
             old: 20
         },
         quantity: 1,
-        stars: 4.5
+        stars: 4.5,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     },
     {
         id: 6,
@@ -63,7 +68,8 @@ export const products = [
             old: 17
         },
         quantity: 1,
-        stars: 4.8
+        stars: 4.8,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     },
     {
         id: 7,
@@ -74,7 +80,8 @@ export const products = [
             old: 17
         },
         quantity: 1,
-        stars: 4.5
+        stars: 4.5,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     },
     {
         id: 8,
@@ -85,6 +92,7 @@ export const products = [
             old: 14
         },
         quantity: 1,
-        stars: 4.2
+        stars: 4.2,
+        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus aliquam, repellat nisi eveniet, ullam dolorum voluptates similique fuga corrupti earum veniam? Omnis quibusdam molestias ipsa aperiam doloribus quod animi aliquid."
     }
 ]
