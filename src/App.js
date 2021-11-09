@@ -25,7 +25,7 @@ function App() {
   const [favVisible, setFavVisible] = useState(false);
   const [favProducts, setFavProducts] = useState([]);
   const [detailsVisible, setDetailsVisible] = useState(false);
-  const [detailProduct, setDetailProduct] = useState({});
+  const [detailProduct, setDetailProduct] = useState([]);
 
   //Add item to the cart
   const addToCart = (product) => {
@@ -140,6 +140,7 @@ function App() {
           favProducts={favProducts} 
           deleteFavItem={deleteFavItem} 
           addToCart={addToCart}
+          viewDetails={viewDetails}
         />
       <Contact
           contact={contact}

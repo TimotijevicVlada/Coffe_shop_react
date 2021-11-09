@@ -86,7 +86,8 @@
   color: white;
 }
 
-* .App .navbar .menu_right i .cartNum, * .App .navbar .menu_right i .favNum {
+* .App .navbar .menu_right i .cartNum,
+* .App .navbar .menu_right i .favNum {
   position: absolute;
   top: -7px;
   right: -9px;
@@ -440,17 +441,16 @@
   padding: 10px 0px;
 }
 
-* .App .details .details_item .details_info .details_price span {
+* .App .details .details_item .details_info .details_price .details_new_price span, * .App .details .details_item .details_info .details_price .details_old_price span {
   font-size: 22px;
-  font-weight: 100;
-  margin: 0px 5px;
 }
 
-* .App .details .details_item .details_info .details_price span .details_currency {
+* .App .details .details_item .details_info .details_price .details_new_price .details_currency, * .App .details .details_item .details_info .details_price .details_old_price .details_currency {
   color: green;
+  margin-left: 10px;
 }
 
-* .App .details .details_item .details_info .details_price .details_price_old {
+* .App .details .details_item .details_info .details_price .details_new_price .details_price_old, * .App .details .details_item .details_info .details_price .details_old_price .details_price_old {
   text-decoration: line-through;
 }
 

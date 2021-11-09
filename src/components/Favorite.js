@@ -1,6 +1,6 @@
 import React from "react";
 
-const Favorite = ({ favVisible, favProducts, deleteFavItem, addToCart }) => {
+const Favorite = ({ favVisible, favProducts, deleteFavItem, addToCart, viewDetails }) => {
   return (
     <div className={favVisible ? "favorite" : "favorite favHidden"}>
       {favProducts.length < 1 ? (
@@ -17,7 +17,7 @@ const Favorite = ({ favVisible, favProducts, deleteFavItem, addToCart }) => {
                     <span>${item.price.current.toFixed(2)}</span>
                 </div>
                 <div className="fav_events">
-                    <i className="fas fa-eye"></i>
+                    <i onClick={() => viewDetails(item)} className="fas fa-eye"></i>
                     <i onClick={() => addToCart(item)} className="fas fa-shopping-cart"></i>
                 </div>
                 <div className="fav_trash">

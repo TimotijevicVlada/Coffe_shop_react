@@ -61,7 +61,8 @@
           &:hover {
             color: white;
           }
-          .cartNum, .favNum {
+          .cartNum,
+          .favNum {
             position: absolute;
             top: -7px;
             right: -9px;
@@ -281,18 +282,18 @@
             justify-content: center;
             align-items: flex-end;
             padding: 10px 0px;
-            span {
-              font-size: 22px;
-              font-weight: 100;
-              margin: 0px 5px;
+            .details_new_price, .details_old_price {
+              span {
+                font-size: 22px;
+              }
               .details_currency {
                 color: green;
+                margin-left: 10px;
               }
-              
-            }
-            .details_price_old {
+              .details_price_old {
                 text-decoration: line-through;
               }
+            }
           }
         }
       }
@@ -336,49 +337,48 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-        .fav_img {
-          width: 25%;
-          img {
-             width: 50px;
-          }
-        }
-        .fav_info {
-          display: flex;
-          flex-direction: column;
-          width: 45%;
-          span {
-            margin: 5px 0px;
-          }
-        }
-        .fav_events {
-          display: flex;
-          flex-direction: column;
-          width: 20%;
-          i {
-            cursor: pointer;
-            font-size: 18px;
-            color: gray;
-            margin: 5px 0px;
-            &:hover {
-              color: black;
+          .fav_img {
+            width: 25%;
+            img {
+              width: 50px;
             }
           }
-        }
-        .fav_trash {
-          margin-right: 10px;
-          width: 10%;
-          i {
-            cursor: pointer;
-            font-size: 18px;
-            color: gray;
-            &:hover {
-              color: black;
+          .fav_info {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            span {
+              margin: 5px 0px;
+            }
+          }
+          .fav_events {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            i {
+              cursor: pointer;
+              font-size: 18px;
+              color: gray;
+              margin: 5px 0px;
+              &:hover {
+                color: black;
+              }
+            }
+          }
+          .fav_trash {
+            margin-right: 10px;
+            width: 10%;
+            i {
+              cursor: pointer;
+              font-size: 18px;
+              color: gray;
+              &:hover {
+                color: black;
+              }
             }
           }
         }
       }
-      }
-      
     }
     .favHidden {
       display: none;
