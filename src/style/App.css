@@ -2092,7 +2092,7 @@
   }
   .App .navbar .menu .menu_exit .fas {
     right: 15px;
-    top: -105px;
+    top: -80px;
   }
   .App .cart,
   .App .details,
@@ -2162,7 +2162,7 @@
     margin: 0px 10px;
   }
   .App .messageUs_wrapper .messageUs_info {
-    height: 80vh;
+    height: 82vh;
   }
   .App .messageUs_wrapper .messageUs_info .map_wrapper {
     height: 45%;
