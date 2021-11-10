@@ -26,6 +26,7 @@ function App() {
   const [favProducts, setFavProducts] = useState([]);
   const [detailsVisible, setDetailsVisible] = useState(false);
   const [detailProduct, setDetailProduct] = useState([]);
+  const [menuVisible, setMenuVisible] = useState(false);
 
   //Add item to the cart
   const addToCart = (product) => {
@@ -119,6 +120,7 @@ function App() {
     setFavVisible(false);
     setCartVisibility(false);
     setContact(false);
+    setMenuVisible(false);
   }
   
 
@@ -134,6 +136,8 @@ function App() {
           setFavVisible={setFavVisible}
           favProducts={favProducts}
           setDetailsVisible={setDetailsVisible}
+          menuVisible={menuVisible}
+          setMenuVisible={setMenuVisible}
         />
       <Favorite 
           favVisible={favVisible} 
