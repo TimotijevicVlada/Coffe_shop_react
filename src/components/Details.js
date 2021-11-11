@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 
 const Details = ({ detailProduct, detailsVisible, setDetailsVisible, addToFav, addToCart }) => {
+
+  //Setting the event to close the details when I click out of this div
+  let detailsRef = useRef();
+  useEffect(() => {
+    let detailsHandler = (event) => {
+      if(!detailsRef.current.contains(event.target)) {
+        setDetailsVisible(false);
+      }
+    }
+    document.addEventListener("mousedown", detailsHandler);
+
+    return () => {
+      document.removeEventListener("mousedown", detailsHandler);
+    }
+  })
+
   return (
-    <div className={detailsVisible ? "details" : "detailsHidden"}>
+    <div ref={detailsRef} className={detailsVisible ? "details" : "detailsHidden"}>
       <div className="details_header">
         <h4>Details</h4>
         <i

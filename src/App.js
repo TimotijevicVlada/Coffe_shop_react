@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from "react";
+import React, {useState, useEffect, useCallback, useRef} from "react";
 import './style/App.css';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -32,7 +32,8 @@ function App() {
   const addToCart = (product) => {
     const exist = cartProducts.find((item) => item.id === product.id);
     if (exist) {
-      alert("This product is already in the cart!");
+      setCartProducts(cartProducts.map(item => item.id === product.id ? 
+        { ...exist, quantity: exist.quantity > 9 ? 10 : exist.quantity + 1} : item))
     } else {
       setCartProducts([...cartProducts, { ...product }]);
     }
@@ -123,6 +124,12 @@ function App() {
     setMenuVisible(false);
   }
   
+  //References for icon in the navbar
+  const cartIcon = useRef();
+  const favIcon = useRef();
+  const contactIcon = useRef();
+  const menuIcon = useRef();
+  
 
   return (
     <div className="App">
@@ -138,6 +145,10 @@ function App() {
           setDetailsVisible={setDetailsVisible}
           menuVisible={menuVisible}
           setMenuVisible={setMenuVisible}
+          cartIcon={cartIcon}
+          favIcon={favIcon}
+          contactIcon={contactIcon}
+          menuIcon={menuIcon}
         />
       <Favorite 
           favVisible={favVisible} 
@@ -145,12 +156,15 @@ function App() {
           deleteFavItem={deleteFavItem} 
           addToCart={addToCart}
           viewDetails={viewDetails}
+          setFavVisible={setFavVisible}
+          favIcon={favIcon}
         />
       <Contact
           contact={contact}
           setContact={setContact}
           switchContact={switchContact}
           setSwitchContact={setSwitchContact}
+          contactIcon={contactIcon}
         />
         <Cart 
           cartVisibility={cartVisibility}
@@ -161,6 +175,8 @@ function App() {
           totalPrice={totalPrice}
           increaseQuantity={increaseQuantity}
           decreaseQuantity={decreaseQuantity}
+          setCartVisibility={setCartVisibility}
+          cartIcon={cartIcon}
         />
       <Details 
           detailProduct={detailProduct}

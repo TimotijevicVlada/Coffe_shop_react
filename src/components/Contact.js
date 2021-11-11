@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
-const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
+const Contact = ({ contactIcon, contact, setContact, switchContact, setSwitchContact }) => {
   const [eyeLogin, setEyeLogin] = useState(true);
   const [eyeSignup, setEyeSignup] = useState(true);
 
@@ -9,6 +9,21 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
 
   const [signupValue, setSignupValue] = useState({name: "", email: "", password: "", confirmPassword: ""});
   const [signupError, setSignupError] = useState({name: "", email: "", password: "", confirmPassword: ""});
+
+   //Setting the event to close the contact when I click out of this div
+   let contactRef = useRef();
+   useEffect(() => {
+     let contactHandler = (event) => {
+       if(!contactRef.current.contains(event.target) && !contactIcon.current.contains(event.target)) {
+        setContact(false);
+       }
+     }
+     document.addEventListener("mousedown", contactHandler);
+ 
+     return () => {
+       document.removeEventListener("mousedown", contactHandler);
+     }
+   })
 
   const validateLogin = (e) => {
     e.preventDefault();
@@ -90,7 +105,7 @@ const Contact = ({ contact, setContact, switchContact, setSwitchContact }) => {
   }
 
   return (
-    <div className={contact ? "contact_form" : "inactive"}>
+    <div ref={contactRef} className={contact ? "contact_form" : "inactive"}>
       {switchContact === "login" ? (
         <form onSubmit={validateLogin} className="login">
           <div className="login_header">

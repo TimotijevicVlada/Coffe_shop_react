@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 
-const Favorite = ({ favVisible, favProducts, deleteFavItem, addToCart, viewDetails }) => {
+const Favorite = ({ favIcon, favVisible, setFavVisible, favProducts, deleteFavItem, addToCart, viewDetails }) => {
+
+  //Setting the event to close the favorite when I click out of this div
+  let favRef = useRef();
+  useEffect(() => {
+    let favHandler = (event) => {
+      if(!favRef.current.contains(event.target) && !favIcon.current.contains(event.target)) {
+        setFavVisible(false);
+      }
+    }
+    document.addEventListener("mousedown", favHandler);
+
+    return () => {
+      document.removeEventListener("mousedown", favHandler);
+    }
+  })
+
   return (
-    <div className={favVisible ? "favorite" : "favorite favHidden"}>
+    <div ref={favRef} className={favVisible ? "favorite" : "favorite favHidden"}>
       {favProducts.length < 1 ? (
         <div className="favorite_empty">Favorite is empty</div>
       ) : (

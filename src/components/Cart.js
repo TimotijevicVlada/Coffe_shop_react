@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 
-const Cart = ({ cartVisibility, cartProducts, setCartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity }) => {
+const Cart = ({ cartIcon, cartVisibility, setCartVisibility, cartProducts, setCartProducts, deleteCartItem, totalProducts, totalPrice, increaseQuantity, decreaseQuantity }) => {
+  
+  //Setting the event to close the cart when I click out of this div
+  let cartRef = useRef();
+  useEffect(() => {
+    let cartHandler = (event) => {
+      if(!cartRef.current.contains(event.target) && !cartIcon.current.contains(event.target)) {
+        setCartVisibility(false);
+      }
+    }
+    document.addEventListener("mousedown", cartHandler);
+
+    return () => {
+      document.removeEventListener("mousedown", cartHandler);
+    }
+  })
+  
   return (
-    <div className={cartVisibility ? "cart" : "cartHidden"}>
+    <div ref={cartRef} className={cartVisibility ? "cart" : "cartHidden"}>
       {cartProducts.length === 0 ? (
         <div className="empty_cart">Cart is empty</div>
       ) : (
