@@ -123,6 +123,51 @@ function App() {
     setContact(false);
     setMenuVisible(false);
   }
+
+   //Function that get cart storage
+   const getCartStorage = () => {
+    if(localStorage.getItem("cartStorage") === null) {
+      localStorage.setItem("cartStorage", JSON.stringify([]));
+    } else {
+      const cartLocalStorage = JSON.parse(localStorage.getItem("cartStorage"));
+      setCartProducts(cartLocalStorage);
+    }
+  }
+  useEffect(() => {
+    getCartStorage();
+  }, [])
+
+  //Function that save cart item to local storage
+  const saveCartStorage = useCallback( () => {
+    localStorage.setItem("cartStorage", JSON.stringify(cartProducts));
+  }, [cartProducts])
+
+  useEffect(() => {
+    saveCartStorage();
+  }, [saveCartStorage])
+
+  //Function that get favorite storage
+  const getfavoriteStorage = () => {
+    if(localStorage.getItem("favoriteStorage") === null) {
+      localStorage.setItem("favoriteStorage", JSON.stringify([]));
+    } else {
+      const favLocalStorage = JSON.parse(localStorage.getItem("favoriteStorage"));
+      setFavProducts(favLocalStorage);
+    }
+  }
+  useEffect(() => {
+    getfavoriteStorage();
+  }, [])
+
+  //Function that save favorite item to local storage
+  const saveFavoriteStorage = useCallback( () => {
+    localStorage.setItem("favoriteStorage", JSON.stringify(favProducts));
+  }, [favProducts])
+
+  useEffect(() => {
+    saveFavoriteStorage();
+  }, [saveFavoriteStorage])
+
   
   //References for icon in the navbar
   const cartIcon = useRef();
