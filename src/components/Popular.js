@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Carousel from "react-elastic-carousel";
 import {products} from "../data";
 
-const Popular = ({addToCart}) => {
+const Popular = ({ addToCart, addToFav }) => {
 
   const [popular] = useState(products.filter(item => item.stars > 4));
 
@@ -23,7 +23,7 @@ const Popular = ({addToCart}) => {
       <div className="popular_item_wrapper">
         <Carousel breakPoints={breakPoints}>
           {popular.map(item => (
-              <div onClick={() => addToCart(item)} className="item" key={item.id}>
+              <div className="item" key={item.id}>
                   <img src={`./coffee_img/${item.img}`} alt={item.name} />
                   <div className="popular_hidden_info">
                     <div className="popular_name"><span>{item.name}</span></div>
@@ -34,6 +34,10 @@ const Popular = ({addToCart}) => {
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>             
+                    </div>
+                    <div className="popular_events">
+                      <i onClick={() => addToCart(item)} className="fas fa-shopping-cart"></i>
+                      <i onClick={() => addToFav(item)} className="fas fa-heart"></i>
                     </div>
                   </div>
               </div>

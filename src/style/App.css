@@ -533,7 +533,8 @@
 * .App .favorite .fav_inner .fav_filters input {
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 0px 10px;
+  padding: 5px 10px;
+  font-size: 15px;
 }
 
 * .App .favorite .fav_inner .fav_filters input::-webkit-input-placeholder {
@@ -1355,7 +1356,7 @@
   padding: 10px;
   border-radius: 5px;
   width: 350px;
-  height: 150px;
+  height: 170px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   text-align: center;
@@ -1408,6 +1409,17 @@
 
 * .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_stars i:last-child {
   border-radius: 0px 5px 5px 0px;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_events .fas {
+  font-size: 22px;
+  padding: 10px 0px;
+  margin: 0px 10px;
+  color: #946b45;
+}
+
+* .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-carousel .rec-slider-container .rec-carousel-item .item .popular_hidden_info .popular_events .fas:hover {
+  color: black;
 }
 
 * .App .popular .popular_item_wrapper .rec-carousel-wrapper .rec-pagination {

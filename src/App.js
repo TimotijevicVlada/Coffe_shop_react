@@ -270,7 +270,10 @@ function App() {
           addToFav={addToFav}
           viewDetails={viewDetails}
         />
-      <Popular addToCart={addToCart}/>
+      <Popular 
+          addToCart={addToCart}
+          addToFav={addToFav}
+        />
       <MessageUs />
       <Review />
       <Footer />
