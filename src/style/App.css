@@ -520,6 +520,47 @@
   width: 5px;
 }
 
+* .App .favorite .fav_inner .fav_filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+* .App .favorite .fav_inner .fav_filters input {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+* .App .favorite .fav_inner .fav_filters input::-webkit-input-placeholder {
+  color: gray;
+}
+
+* .App .favorite .fav_inner .fav_filters input:-ms-input-placeholder {
+  color: gray;
+}
+
+* .App .favorite .fav_inner .fav_filters input::-ms-input-placeholder {
+  color: gray;
+}
+
+* .App .favorite .fav_inner .fav_filters input::placeholder {
+  color: gray;
+}
+
+* .App .favorite .fav_inner .fav_filters input:focus {
+  outline: none;
+}
+
+* .App .favorite .fav_inner .fav_filters span {
+  color: gray;
+  cursor: pointer;
+}
+
 * .App .favorite .fav_inner .fav_item {
   display: -webkit-box;
   display: -ms-flexbox;

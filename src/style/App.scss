@@ -341,6 +341,26 @@
         &::-webkit-scrollbar {
           width: 5px;
         }
+        .fav_filters {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+          input {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            padding: 0px 10px;
+            &::placeholder {
+              color: gray;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+          span {
+            color: gray;
+            cursor: pointer;
+          }
+        }
         .fav_item {
           display: flex;
           justify-content: space-between;

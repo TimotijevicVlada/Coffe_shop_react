@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 
-const Favorite = ({ favIcon, favVisible, setFavVisible, favProducts, deleteFavItem, addToCart, viewDetails }) => {
+const Favorite = ({ filteredFavorite, sort, switchDirection, setSearch, favIcon, favVisible, setFavVisible, favProducts, deleteFavItem, addToCart, viewDetails }) => {
 
   //Setting the event to close the favorite when I click out of this div
   let favRef = useRef();
@@ -23,7 +23,14 @@ const Favorite = ({ favIcon, favVisible, setFavVisible, favProducts, deleteFavIt
         <div className="favorite_empty">Favorite is empty</div>
       ) : (
         <div className="fav_inner">
-          {favProducts.map((item) => (
+          <div className="fav_filters">
+              <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Search by name"/>
+              {sort === "asc" ? <span onClick={switchDirection}>price <i class="fas fa-angle-up"></i></span> : 
+                <span onClick={switchDirection}>price <i class="fas fa-angle-down"></i></span>
+              }
+              
+          </div>
+          {filteredFavorite.map((item) => (
             <div className="fav_item" key={item.id}>
                 <div className="fav_img">
                     <img src={`./coffee_img/${item.img}`} alt={item.name} />

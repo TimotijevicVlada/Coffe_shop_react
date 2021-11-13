@@ -27,6 +27,35 @@ function App() {
   const [detailsVisible, setDetailsVisible] = useState(false);
   const [detailProduct, setDetailProduct] = useState([]);
   const [menuVisible, setMenuVisible] = useState(false);
+  const [search, setSearch] = useState("");
+  const [sort, setSort] = useState("asc");
+
+
+  //Funtion to sort the favorite by price
+  const orderFavorite = (direction) => {
+    if (direction === "asc") {
+      return [...favProducts].sort((a, b) => (a.price.current > b.price.current ? 1 : -1));
+    }
+    if (direction === "desc") {
+      return [...favProducts].sort((a, b) => (a.price.current > b.price.current ? -1 : 1));
+    }
+    return favProducts;
+  };
+  
+  //Funtion to switch direction of sorting
+  const switchDirection = () => {
+    if (sort === "desc") {
+      setSort("asc");
+    } else {
+      setSort("desc");
+    }
+  };
+
+  //Variable that represent sorted favorite products
+  const orderedFavorites = orderFavorite(sort);
+  
+  //Variable that represent filtered favorite products
+  const filteredFavorite = orderedFavorites.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
 
   //Add item to the cart
   const addToCart = (product) => {
@@ -197,12 +226,16 @@ function App() {
         />
       <Favorite 
           favVisible={favVisible} 
-          favProducts={favProducts} 
+          favProducts={favProducts}
+          filteredFavorite={filteredFavorite} 
           deleteFavItem={deleteFavItem} 
           addToCart={addToCart}
           viewDetails={viewDetails}
           setFavVisible={setFavVisible}
           favIcon={favIcon}
+          setSearch={setSearch}
+          switchDirection={switchDirection}
+          sort={sort}
         />
       <Contact
           contact={contact}
